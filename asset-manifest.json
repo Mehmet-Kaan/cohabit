@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/cohabit/static/css/main.349ab36b.css",
-    "main.js": "/cohabit/static/js/main.0c677e69.js",
+    "main.js": "/cohabit/static/js/main.500763f2.js",
     "static/media/portrait.jpg": "/cohabit/static/media/portrait.74dae534f81b87dca952.jpg",
     "static/media/twitter.png": "/cohabit/static/media/twitter.72ba7127bce3cb050fef.png",
     "static/media/instagram.png": "/cohabit/static/media/instagram.0f570ec3700bb6ee6058.png",
     "static/media/COHABIT-horizontal.png": "/cohabit/static/media/COHABIT-horizontal.5582d01b7d675537aca2.png",
     "index.html": "/cohabit/index.html",
     "main.349ab36b.css.map": "/cohabit/static/css/main.349ab36b.css.map",
-    "main.0c677e69.js.map": "/cohabit/static/js/main.0c677e69.js.map"
+    "main.500763f2.js.map": "/cohabit/static/js/main.500763f2.js.map"
   },
   "entrypoints": [
     "static/css/main.349ab36b.css",
-    "static/js/main.0c677e69.js"
+    "static/js/main.500763f2.js"
   ]
 }
