@@ -1,15 +1,27 @@
 {
   "files": {
-    "main.css": "/cohabit/static/css/main.349ab36b.css",
-    "main.js": "/cohabit/static/js/main.b43b4a45.js",
+    "main.css": "/cohabit/static/css/main.53afb49c.css",
+    "main.js": "/cohabit/static/js/main.0a3618d0.js",
     "static/media/portrait.jpg": "/cohabit/static/media/portrait.74dae534f81b87dca952.jpg",
+    "static/media/small_table.jpg": "/cohabit/static/media/small_table.ae6a87e4e2497d66a60a.jpg",
+    "static/media/chair.jpg": "/cohabit/static/media/chair.299c789e86f73c995421.jpg",
+    "static/media/work_chair.jpg": "/cohabit/static/media/work_chair.eeef1d2a4048a85e6324.jpg",
+    "static/media/large_table.jpg": "/cohabit/static/media/large_table.52a15279afa6feebfe8c.jpg",
+    "static/media/small_double_bed.jpg": "/cohabit/static/media/small_double_bed.cf6cf6d59161867bf28e.jpg",
+    "static/media/single_bed.jpg": "/cohabit/static/media/single_bed.3a606134cb80eaa182df.jpg",
+    "static/media/double_bed.jpg": "/cohabit/static/media/double_bed.100eeb9e3736eeeafd75.jpg",
+    "static/media/working_dining_table.jpg": "/cohabit/static/media/working_dining_table.9b918396f9b4da3096ee.jpg",
+    "static/media/Bundle.jpeg": "/cohabit/static/media/Bundle.806b2f3237f872f869b0.jpeg",
+    "static/media/twitter.png": "/cohabit/static/media/twitter.72ba7127bce3cb050fef.png",
+    "static/media/instagram.png": "/cohabit/static/media/instagram.0f570ec3700bb6ee6058.png",
     "static/media/COHABIT-horizontal.png": "/cohabit/static/media/COHABIT-horizontal.5582d01b7d675537aca2.png",
+    "static/media/logo.png": "/cohabit/static/media/logo.5582d01b7d675537aca2.png",
     "index.html": "/cohabit/index.html",
-    "main.349ab36b.css.map": "/cohabit/static/css/main.349ab36b.css.map",
-    "main.b43b4a45.js.map": "/cohabit/static/js/main.b43b4a45.js.map"
+    "main.53afb49c.css.map": "/cohabit/static/css/main.53afb49c.css.map",
+    "main.0a3618d0.js.map": "/cohabit/static/js/main.0a3618d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.349ab36b.css",
-    "static/js/main.b43b4a45.js"
+    "static/css/main.53afb49c.css",
+    "static/js/main.0a3618d0.js"
   ]
 }
