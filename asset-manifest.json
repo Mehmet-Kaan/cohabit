@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cohabit/static/css/main.b90bbe6b.css",
-    "main.js": "/cohabit/static/js/main.b4fb479f.js",
+    "main.css": "/cohabit/static/css/main.da86d240.css",
+    "main.js": "/cohabit/static/js/main.f82f1713.js",
     "static/media/portrait.jpg": "/cohabit/static/media/portrait.74dae534f81b87dca952.jpg",
     "static/media/small_table.jpg": "/cohabit/static/media/small_table.ae6a87e4e2497d66a60a.jpg",
     "static/media/chair.jpg": "/cohabit/static/media/chair.299c789e86f73c995421.jpg",
@@ -20,12 +20,16 @@
     "static/media/instagram.png": "/cohabit/static/media/instagram.0f570ec3700bb6ee6058.png",
     "static/media/COHABIT-horizontal.png": "/cohabit/static/media/COHABIT-horizontal.5582d01b7d675537aca2.png",
     "static/media/logo.png": "/cohabit/static/media/logo.5582d01b7d675537aca2.png",
+    "static/media/slick.svg": "/cohabit/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/cohabit/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/cohabit/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/cohabit/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cohabit/index.html",
-    "main.b90bbe6b.css.map": "/cohabit/static/css/main.b90bbe6b.css.map",
-    "main.b4fb479f.js.map": "/cohabit/static/js/main.b4fb479f.js.map"
+    "main.da86d240.css.map": "/cohabit/static/css/main.da86d240.css.map",
+    "main.f82f1713.js.map": "/cohabit/static/js/main.f82f1713.js.map"
   },
   "entrypoints": [
-    "static/css/main.b90bbe6b.css",
-    "static/js/main.b4fb479f.js"
+    "static/css/main.da86d240.css",
+    "static/js/main.f82f1713.js"
   ]
 }
