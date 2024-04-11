@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/cohabit/static/css/main.87e65ca9.css",
-    "main.js": "/cohabit/static/js/main.0d28e813.js",
+    "main.css": "/cohabit/static/css/main.1494f112.css",
+    "main.js": "/cohabit/static/js/main.5755f95d.js",
     "static/media/portrait.jpg": "/cohabit/static/media/portrait.74dae534f81b87dca952.jpg",
     "static/media/small_table.jpg": "/cohabit/static/media/small_table.ae6a87e4e2497d66a60a.jpg",
     "static/media/chair.jpg": "/cohabit/static/media/chair.299c789e86f73c995421.jpg",
-    "static/media/lights.jpg": "/cohabit/static/media/lights.299c789e86f73c995421.jpg",
-    "static/media/storage_large.jpg": "/cohabit/static/media/storage_large.299c789e86f73c995421.jpg",
-    "static/media/storage_medium.jpg": "/cohabit/static/media/storage_medium.299c789e86f73c995421.jpg",
     "static/media/storage_small.jpg": "/cohabit/static/media/storage_small.299c789e86f73c995421.jpg",
     "static/media/work_chair.jpg": "/cohabit/static/media/work_chair.eeef1d2a4048a85e6324.jpg",
     "static/media/large_table.jpg": "/cohabit/static/media/large_table.52a15279afa6feebfe8c.jpg",
-    "static/media/small_double_bed.jpg": "/cohabit/static/media/small_double_bed.cf6cf6d59161867bf28e.jpg",
-    "static/media/single_bed.jpg": "/cohabit/static/media/single_bed.3a606134cb80eaa182df.jpg",
-    "static/media/double_bed.jpg": "/cohabit/static/media/double_bed.100eeb9e3736eeeafd75.jpg",
     "static/media/working_dining_table.jpg": "/cohabit/static/media/working_dining_table.9b918396f9b4da3096ee.jpg",
     "static/media/Bundle.jpeg": "/cohabit/static/media/Bundle.806b2f3237f872f869b0.jpeg",
+    "static/media/small_double_bed.png": "/cohabit/static/media/small_double_bed.66b40bd84e2abf3955cc.png",
+    "static/media/bedside_storage.png": "/cohabit/static/media/bedside_storage.2d101edaee1f41af1c15.png",
+    "static/media/storage_large.png": "/cohabit/static/media/storage_large.fb993ff2e4281fcfe2f4.png",
+    "static/media/double_bed.png": "/cohabit/static/media/double_bed.2c23fee82bee51063a91.png",
     "static/media/twitter.png": "/cohabit/static/media/twitter.72ba7127bce3cb050fef.png",
+    "static/media/storage_medium.png": "/cohabit/static/media/storage_medium.ea386f98ab6af857be2b.png",
+    "static/media/large_single_bed.png": "/cohabit/static/media/large_single_bed.caae6896c0286aae3cd0.png",
+    "static/media/single_bed.png": "/cohabit/static/media/single_bed.10868e4a5001d7e8c0c0.png",
     "static/media/instagram.png": "/cohabit/static/media/instagram.0f570ec3700bb6ee6058.png",
     "static/media/COHABIT-horizontal.png": "/cohabit/static/media/COHABIT-horizontal.5582d01b7d675537aca2.png",
     "static/media/logo.png": "/cohabit/static/media/logo.5582d01b7d675537aca2.png",
@@ -25,11 +26,11 @@
     "static/media/slick.ttf": "/cohabit/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/cohabit/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cohabit/index.html",
-    "main.87e65ca9.css.map": "/cohabit/static/css/main.87e65ca9.css.map",
-    "main.0d28e813.js.map": "/cohabit/static/js/main.0d28e813.js.map"
+    "main.1494f112.css.map": "/cohabit/static/css/main.1494f112.css.map",
+    "main.5755f95d.js.map": "/cohabit/static/js/main.5755f95d.js.map"
   },
   "entrypoints": [
-    "static/css/main.87e65ca9.css",
-    "static/js/main.0d28e813.js"
+    "static/css/main.1494f112.css",
+    "static/js/main.5755f95d.js"
   ]
 }
