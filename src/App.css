@@ -23,7 +23,7 @@ html {
 	width: 90%;
   	max-width: 1200px;
 	z-index: 1;
-	/* margin-top: 15px; */
+	margin-top: 15px;
 }
 .logo {
 	width: 30%;
@@ -554,6 +554,7 @@ html {
 	margin-bottom: 20px;
 	line-height: 22.5px;
 	text-align: center;
+	font-size: 14px;
 }
 .btn.newOrderBtn{
 	margin-bottom: 0;
@@ -675,6 +676,9 @@ html {
 	.container{
 		justify-content: flex-start;
 		height: 83%;
+	}
+	.content{
+		margin-top: unset;
 	}
 	.ordermade{
 		justify-content: flex-start;

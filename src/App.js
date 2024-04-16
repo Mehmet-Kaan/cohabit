@@ -22,7 +22,7 @@ function App() {
             id: 0,
             name: "Studio Bundle",
             imageUrl: "Bundle.jpeg",
-            description:"The basic bundle includes a single bed, small table and chair.",
+            description:"The basic bundle includes a single bed (90cm x 200cm), small table and chair.",
             cost: 299,
             type:'bundle',
             quantity:1,
@@ -71,7 +71,7 @@ function App() {
             cost: 50,
             type:'bundle',
             quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/double_bed.jpg?raw=true'
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/chair.jpg?raw=true'
         },
         {
             id: 105,
@@ -91,7 +91,7 @@ function App() {
             cost: 100,
             type:'bundle',
             quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/chair.jpg?raw=true',
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/large_table.jpg?raw=true',
         },
         {
             id: 107,
@@ -116,22 +116,22 @@ function App() {
         {
             id: 109,
             name: "Add on: 2 Seater Sofa",
-            imageUrl: "large_table.jpg",
+            imageUrl: "sofa.png",
             description:"Add an additional Sofa (two seater) to your studio bundle",
             cost: 150,
             type:'bundle',
             quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/chair.jpg?raw=true',
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/sofa.png?raw=true',
         },
         {
             id: 110,
             name: "Add on: 3 Seater Sofa",
-            imageUrl: "large_table.jpg",
+            imageUrl: "sofa.png",
             description:"Add an additional Sofa (Three seater) to your studio bundle",
             cost: 200,
             type:'bundle',
             quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/chair.jpg?raw=true',
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/sofa.png?raw=true',
         },
     ])
     const [products, setProducts] = useState([
@@ -363,7 +363,7 @@ function App() {
             setActiveProducts("notSelected");
             setResponse("");
             let fetchURL = 'https://cohabit-backend-mehmet.onrender.com/sendEmails';
-            // let fetchURL = 'sendEmails';
+            fetchURL = 'sendEmails';
             
             axios.post(fetchURL, state)
                 .then((res)=>{
@@ -1037,8 +1037,8 @@ function App() {
                                 <h3>Thank you for choosing circularity with Cohabit, <span className='name-span'>{state.name}!</span></h3>
                                 <h2>{state.name}!</h2>
 
-                                <p>Cohabit has received your order, and you will receive a confirmation email shortly. 
-                                    If you have further questions, contact us at <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a>, WhatsApp <a className='link' href="tel:+46709526846">+46 709 52 68 46</a> or book a call with us <a className='link' rel={"noreferrer"} target='_blank' href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2cEEdCFOzTPUR_eIxwtrtMJ-CiFl_XHn6mexmLRyY6gwwqd1IoKt6xiAO1ljzynh763vT1fCq4">here</a>.</p>
+                                <p>We have received your order, and you will receive a confirmation email shortly. 
+                                If you have further questions, contact us at <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a>, WhatsApp <a className='link' href="tel:+46709526846">+46 709 52 68 46</a> or book a call with us <a className='link' rel={"noreferrer"} target='_blank' href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2cEEdCFOzTPUR_eIxwtrtMJ-CiFl_XHn6mexmLRyY6gwwqd1IoKt6xiAO1ljzynh763vT1fCq4">here</a>.</p>
                                 
                                 <div className='portraitBox'>
                                     <img className='portrait' loading='lazy' src={require("./assets/portrait.jpg")} alt='cohabitTeamPortrait'/>
