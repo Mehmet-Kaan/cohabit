@@ -363,7 +363,7 @@ function App() {
             setActiveProducts("notSelected");
             setResponse("");
             let fetchURL = 'https://cohabit-backend-mehmet.onrender.com/sendEmails';
-            fetchURL = 'sendEmails';
+            // fetchURL = 'sendEmails';
             
             axios.post(fetchURL, state)
                 .then((res)=>{
