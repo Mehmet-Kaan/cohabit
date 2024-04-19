@@ -363,7 +363,7 @@ function App() {
             setActiveProducts("notSelected");
             setResponse("");
             let fetchURL = 'https://cohabit-backend-mehmet.onrender.com/sendEmails';
-            // fetchURL = 'sendEmails';
+            fetchURL = 'sendEmails';
             
             axios.post(fetchURL, state)
                 .then((res)=>{
@@ -626,7 +626,7 @@ function App() {
                                 {
                                 currentSection === "products" ?
                                 <>
-                                    <p className='raleway-normal' style={{marginTop: '0', fontSize: '16px'}}>The images you see are indicative of the type of furniture offered.</p>
+                                    <p className='raleway-normal' style={{marginTop: '0', fontSize: '16px'}}>The images you see are indicative of the type of furniture offered. For more information, you can check the <a href="https://cohabit.se/how-cohabit-works/" target='_blank' rel='noreferrer' className="link">FAQ page</a>.</p>
                                     <div className="inputsBox productsBox">
                                         {activeProducts === "notSelected" ? 
                                         <div className="activeProductsBtns">
@@ -769,7 +769,7 @@ function App() {
                                                                 <div className="productInfoB">
                                                                     <h3 className='productText'>{bundle.name}</h3>
                                                                     <p className='productDesc'>{bundle.description}</p>
-                                                                    <h5 className='productText'>{bundle.cost} SEK <span style={{fontWeight:'400'}}>/ st</span></h5>
+                                                                    <h5 className='productText'><span style={{fontWeight:'400'}}>Starts at </span>{bundle.cost} SEK / month</h5>
                                                                 </div>
                                                                 
                                                                 {state.orderList.includes(bundle) ? 
@@ -795,7 +795,7 @@ function App() {
                                                                         {product.description && 
                                                                             <p className='productDesc'>{product.description}</p>
                                                                         }
-                                                                        <h5 className='productText'>{product.cost} SEK <span style={{fontWeight:'400'}}>/ st</span></h5>
+                                                                        <h5 className='productText'>{product.cost} SEK</h5>
                                                                     </div>
                                                                     {state.orderList.includes(product) ? 
                                                                         <div className='productText selectProductBtn' style={{background:'black', cursor:'default'}}>&#x2713;</div>
