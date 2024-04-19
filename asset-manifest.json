@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cohabit/static/css/main.f45187c1.css",
-    "main.js": "/cohabit/static/js/main.b3d47cd9.js",
+    "main.js": "/cohabit/static/js/main.b21171b5.js",
     "static/media/portrait.jpg": "/cohabit/static/media/portrait.74dae534f81b87dca952.jpg",
     "static/media/small_table.jpg": "/cohabit/static/media/small_table.ae6a87e4e2497d66a60a.jpg",
     "static/media/chair.jpg": "/cohabit/static/media/chair.299c789e86f73c995421.jpg",
@@ -10,6 +10,7 @@
     "static/media/large_table.jpg": "/cohabit/static/media/large_table.52a15279afa6feebfe8c.jpg",
     "static/media/working_dining_table.jpg": "/cohabit/static/media/working_dining_table.9b918396f9b4da3096ee.jpg",
     "static/media/Bundle.jpeg": "/cohabit/static/media/Bundle.806b2f3237f872f869b0.jpeg",
+    "static/media/qr.jpg": "/cohabit/static/media/qr.a932e5418621605bbc63.jpg",
     "static/media/small_double_bed.png": "/cohabit/static/media/small_double_bed.66b40bd84e2abf3955cc.png",
     "static/media/bedside_storage.png": "/cohabit/static/media/bedside_storage.2d101edaee1f41af1c15.png",
     "static/media/sofa.png": "/cohabit/static/media/sofa.7892001fc8d12757fc2b.png",
@@ -28,10 +29,10 @@
     "static/media/slick.woff": "/cohabit/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cohabit/index.html",
     "main.f45187c1.css.map": "/cohabit/static/css/main.f45187c1.css.map",
-    "main.b3d47cd9.js.map": "/cohabit/static/js/main.b3d47cd9.js.map"
+    "main.b21171b5.js.map": "/cohabit/static/js/main.b21171b5.js.map"
   },
   "entrypoints": [
     "static/css/main.f45187c1.css",
-    "static/js/main.b3d47cd9.js"
+    "static/js/main.b21171b5.js"
   ]
 }
