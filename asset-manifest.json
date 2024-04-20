@@ -1,13 +1,9 @@
 {
   "files": {
-    "main.css": "/cohabit/static/css/main.f45187c1.css",
-    "main.js": "/cohabit/static/js/main.cfb7d8a8.js",
+    "main.css": "/cohabit/static/css/main.0e90d60b.css",
+    "main.js": "/cohabit/static/js/main.bb49e38f.js",
     "static/media/portrait.jpg": "/cohabit/static/media/portrait.74dae534f81b87dca952.jpg",
-    "static/media/small_table.jpg": "/cohabit/static/media/small_table.ae6a87e4e2497d66a60a.jpg",
-    "static/media/chair.jpg": "/cohabit/static/media/chair.299c789e86f73c995421.jpg",
     "static/media/storage_small.jpg": "/cohabit/static/media/storage_small.299c789e86f73c995421.jpg",
-    "static/media/work_chair.jpg": "/cohabit/static/media/work_chair.eeef1d2a4048a85e6324.jpg",
-    "static/media/large_table.jpg": "/cohabit/static/media/large_table.52a15279afa6feebfe8c.jpg",
     "static/media/working_dining_table.jpg": "/cohabit/static/media/working_dining_table.9b918396f9b4da3096ee.jpg",
     "static/media/Bundle.jpeg": "/cohabit/static/media/Bundle.806b2f3237f872f869b0.jpeg",
     "static/media/qr.jpg": "/cohabit/static/media/qr.a932e5418621605bbc63.jpg",
@@ -20,6 +16,7 @@
     "static/media/storage_medium.png": "/cohabit/static/media/storage_medium.ea386f98ab6af857be2b.png",
     "static/media/large_single_bed.png": "/cohabit/static/media/large_single_bed.caae6896c0286aae3cd0.png",
     "static/media/single_bed.png": "/cohabit/static/media/single_bed.10868e4a5001d7e8c0c0.png",
+    "static/media/rug.jpg": "/cohabit/static/media/rug.b875d1c4b79f81f86d68.jpg",
     "static/media/instagram.png": "/cohabit/static/media/instagram.0f570ec3700bb6ee6058.png",
     "static/media/COHABIT-horizontal.png": "/cohabit/static/media/COHABIT-horizontal.5582d01b7d675537aca2.png",
     "static/media/logo.png": "/cohabit/static/media/logo.5582d01b7d675537aca2.png",
@@ -28,11 +25,11 @@
     "static/media/slick.ttf": "/cohabit/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/cohabit/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cohabit/index.html",
-    "main.f45187c1.css.map": "/cohabit/static/css/main.f45187c1.css.map",
-    "main.cfb7d8a8.js.map": "/cohabit/static/js/main.cfb7d8a8.js.map"
+    "main.0e90d60b.css.map": "/cohabit/static/css/main.0e90d60b.css.map",
+    "main.bb49e38f.js.map": "/cohabit/static/js/main.bb49e38f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f45187c1.css",
-    "static/js/main.cfb7d8a8.js"
+    "static/css/main.0e90d60b.css",
+    "static/js/main.bb49e38f.js"
   ]
 }
