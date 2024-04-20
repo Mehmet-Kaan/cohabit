@@ -655,7 +655,7 @@ function App() {
                                                         </div>
                                                     </div>
                                                 :
-                                                    <div className="productSelectionDiv">
+                                                    <div className="productSelectionDiv singleItemsContainer">
                                                         <h3>Single Items</h3>
                                                         <div className='orderlistBox'>
                                                             <div className='activeProductsBtn' onClick={()=> { window.scrollTo({ top: 0, behavior: 'smooth' }); setActiveProducts("others")}}>+</div>

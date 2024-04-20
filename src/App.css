@@ -163,7 +163,6 @@ html {
 .productSelectionDiv {
 	width: 95%;
 	padding-bottom: 5px;
-	overflow: scroll;
 }
 .orderListReviewBox {
 	gap: 15px;
@@ -292,7 +291,10 @@ html {
 	display: flex;
 	gap: 10px;
 	padding: 3px;
-	width: fit-content;
+	/* width: fit-content; */
+	overflow-x: auto;
+	padding-bottom: 15px;
+	width: 100%;
 }
 .orderlistItem {
 	border-radius: 15px;
@@ -304,7 +306,7 @@ html {
 	background-color: #a0ebf28a;
 	display: flex;
 	align-items: center;
-	min-width: 120px;
+	/* min-width: 120px; */
 }
 .orderImg {
 	border-top-left-radius: 15px;
@@ -324,6 +326,7 @@ html {
 .orderlistItemTextBox > h4{
 	margin-top: 0;
 	margin-bottom: 10px;
+	min-width: 120px;
 }
 .orderlistItemText {
 	margin: 0;
@@ -581,7 +584,7 @@ html {
 	align-items: unset;
 	padding-bottom: 32px;
 	border-top: 1px solid #FDCA40;
-  border-bottom: 1px solid #FDCA40;
+  	border-bottom: 1px solid #FDCA40;
 	padding-top: 15px;
 }
 .slick-slider .slick-list{
@@ -592,7 +595,9 @@ html {
 	border-radius: 14px;
 	box-shadow: 0px 0px 3px;
 }
-
+.slick-prev::before, .slick-next::before {
+	color: black;
+}
 .attention{
 	margin-top: 15px;
 	font-size: 15px;
@@ -729,9 +734,6 @@ html {
 		height: 170px;
 		min-width: 170px;
 	}
-	.orderlistItemTextBox {
-		/* display: none; */
-	}
 	.removeOnMobileV{
 		display: none;
 	}
@@ -791,6 +793,7 @@ html {
 		width: 265px;
 		font-weight: bold;
 		color: #FDCA40;
+		color: black;
 		font-size: 20px;
 		text-align: right;
 	}
@@ -822,6 +825,9 @@ html {
 		align-items: unset;
     	padding-bottom: 30px;
 		padding-top: 12px;
+	}
+	.slick-prev::before, .slick-next::before {
+		display: none;
 	}
 	.input-wrapper{
 		flex-direction: column;
@@ -889,12 +895,23 @@ html {
 }
 
 /* For WebKit browsers like Chrome and Safari */
-::-webkit-scrollbar {
-	background-color: rgba(255, 255, 255, 0); /* Transparent background */
-  }
-  
-  /* For Firefox */
-  html {
-	scrollbar-color: transparent transparent; /* Transparent scrollbar */
-  }
-  
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+	height: 7px;
+	scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #a0ebf287;
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* For Internet Explorer and Edge */
+/* For Firefox */
+html {
+    -ms-overflow-style: scrollbar;
+    scrollbar-width: thin;
+}
