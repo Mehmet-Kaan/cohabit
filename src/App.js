@@ -106,12 +106,12 @@ function App() {
         {
             id: 108,
             name: "Add on: Rug",
-            imageUrl: "large_table.jpg",
+            imageUrl: "rug.jpg",
             description:"Add an additional rug to your studio bundle",
             cost: 100,
             type:'bundle',
             quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/chair.jpg?raw=true',
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/rug.jpg?raw=true',
         },
         {
             id: 109,

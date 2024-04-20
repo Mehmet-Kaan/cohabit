@@ -163,6 +163,7 @@ html {
 .productSelectionDiv {
 	width: 95%;
 	padding-bottom: 5px;
+	overflow: scroll;
 }
 .orderListReviewBox {
 	gap: 15px;
@@ -290,10 +291,8 @@ html {
 .orderlistBox {
 	display: flex;
 	gap: 10px;
-	width: 100%;
 	padding: 3px;
-	overflow-x: scroll;
-	overflow-y: hidden;
+	width: fit-content;
 }
 .orderlistItem {
 	border-radius: 15px;
