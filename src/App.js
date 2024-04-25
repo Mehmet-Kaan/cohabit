@@ -822,7 +822,16 @@ function App() {
                                  <div className="inputsBox">
                                         <div className="input-wrapper">
                                             <label htmlFor="name">Full Name <span style={{color:'red'}}>*</span></label>
-                                            <input id="name" type="text" name='name' onChange={handleChange} value={state.name}/>
+                                            <input 
+                                                id="name" 
+                                                type="text" 
+                                                name='name' 
+                                                onKeyPress={(e) => {
+                                                    if (!((e.charCode >= 65 && e.charCode <= 90) || (e.charCode >= 97 && e.charCode <= 122) || e.charCode === 32)) {
+                                                        e.preventDefault();
+                                                    }
+                                                }}
+                                                onChange={handleChange} value={state.name}/>
                                         </div>
                                         <div className="input-wrapper">
                                             <label htmlFor="phonenumber">Phone Number <span style={{color:'red'}}>*</span></label>
@@ -846,6 +855,11 @@ function App() {
                                             
                                             <div className='emailInputBox'>
                                                 <input id="email" type="text" name='email' placeholder=''
+                                                   onKeyPress={(e) => {
+                                                        if (e.charCode === 32) {
+                                                            e.preventDefault();
+                                                        }
+                                                    }}
                                                     onChange={handleChange}
                                                     value={state.email}/>
                                             </div>
