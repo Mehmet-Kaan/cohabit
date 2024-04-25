@@ -249,6 +249,14 @@ function App() {
         }
     ]);
 
+    const getCurrentDate = () => {
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var month = ('0' + (currentDate.getMonth() + 1)).slice(-2); // Add leading zero if month < 10
+        var day = ('0' + currentDate.getDate()).slice(-2); // Add leading zero if day < 10
+        return year + '-' + month + '-' + day;
+      }
+
     const [state, setState] = useState({
         name:"",
         email:"",
@@ -258,14 +266,10 @@ function App() {
         phonenumber:0,
         period:"",
         address:"",
-        price:299,
         deliveryCharge:400,
-        productPrice:299,
-        shippingPrice:400,
-        product:"product name",
         orderList:[],
         addOnsList:[],
-        deliveryDate:"",
+        deliveryDate:getCurrentDate(),
         timePreference:"",
         anythingElse:"",
         userConsent:false,
@@ -282,13 +286,10 @@ function App() {
         phonenumber:0,
         period:"",
         address:"",
-        price:299,
-        productPrice:299,
-        shippingPrice:400,
-        product:"prudktn name",
+        deliveryCharge:400,
         orderList:[],
         addOnsList:[],
-        deliveryDate:"",
+        deliveryDate:getCurrentDate(),
         timePreference:"",
         anythingElse:"",
         userConsent:false,
@@ -365,7 +366,12 @@ function App() {
             let fetchURL = 'https://cohabit-backend-mehmet.onrender.com/sendEmails';
             // fetchURL = 'sendEmails';
             
-            axios.post(fetchURL, state)
+            axios.post(fetchURL, state, {
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': 'cohabit', 
+                }
+              })
                 .then((res)=>{
                     // console.log(res);
                 })
@@ -604,14 +610,6 @@ function App() {
 
         return {addonlist,priceToReduce};
     }
-
-    const getCurrentDate = () => {
-        var currentDate = new Date();
-        var year = currentDate.getFullYear();
-        var month = ('0' + (currentDate.getMonth() + 1)).slice(-2); // Add leading zero if month < 10
-        var day = ('0' + currentDate.getDate()).slice(-2); // Add leading zero if day < 10
-        return year + '-' + month + '-' + day;
-      }
 
   return (
     <div className="App">
