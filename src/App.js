@@ -263,9 +263,10 @@ function App() {
         emailWithoutDomain:"",
         domain:"@hotmail.com",
         wpnumber:false,
-        phonenumber:0,
+        phonenumber:"+46",
         period:"",
         address:"",
+        postcode:"",
         deliveryCharge:400,
         orderList:[],
         addOnsList:[],
@@ -283,9 +284,10 @@ function App() {
         emailWithoutDomain:"",
         domain:"@hotmail.com",
         wpnumber:false,
-        phonenumber:0,
+        phonenumber:"+46",
         period:"",
         address:"",
+        postcode:"",
         deliveryCharge:400,
         orderList:[],
         addOnsList:[],
@@ -839,7 +841,7 @@ function App() {
                                                 id="phonenumber" 
                                                 type="text" 
                                                 onKeyPress={(e) => {
-                                                    if (!(e.charCode >= 48 && e.charCode <= 57)) {
+                                                    if (!(e.charCode >= 48 && e.charCode <= 57) && !(e.charCode === 43)) {
                                                     e.preventDefault();
                                                     }
                                                 }}
@@ -872,6 +874,23 @@ function App() {
                                         <div className="input-wrapper">
                                             <label htmlFor="address">Address <span style={{color:'red'}}>*</span></label>
                                             <input id="address" type="text" name='address' onChange={handleChange} value={state.address}/>
+                                        </div>
+                                        <div className="input-wrapper">
+                                            <label htmlFor="postcode">Postcode <span style={{color:'red'}}>*</span></label>
+                                            <input 
+                                                id="postcode" 
+                                                type="text" 
+                                                onKeyPress={(e) => {
+                                                    if (!(e.charCode >= 48 && e.charCode <= 57) && e.charCode !== 32) {
+                                                    e.preventDefault();
+                                                    }
+                                                }}
+                                                onPaste={(e) => e.preventDefault()} 
+                                                onDrop={(e) => e.preventDefault()} 
+                                                name="postcode" 
+                                                onChange={handleChange} 
+                                                value={state.postcode}
+                                                />
                                         </div>
                                         <div className="input-wrapper">
                                             <label style={{lineHeight:'1.5', width:'70%'}} htmlFor="period">How long do you want to rent the furniture? <span style={{color:'red'}}>*</span></label>
