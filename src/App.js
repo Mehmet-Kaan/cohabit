@@ -425,7 +425,7 @@ function App() {
                 }
                 break;
             case 'customerInfo':
-                if (state.name !== "" && state.email !== "" && state.address !== "" && state.phonenumber !== 0 && state.period !== "" && state.deliveryDate !== "" && state.timePreference !== "") {
+                if (state.name !== "" && state.email !== "" && state.address !== "" && state.postcode !== "" && (state.phonenumber !== '+46' && state.phonenumber !== 0 && state.phonenumber !== null ) && state.period !== "" && state.deliveryDate !== "" && state.timePreference !== "") {
                     if(validator.isEmail(state.email)){
                         setIsValidEmail(true);
                         setCurrentSection("summary");
