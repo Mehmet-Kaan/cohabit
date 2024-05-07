@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cohabit/static/css/main.fb86dc0b.css",
-    "main.js": "/cohabit/static/js/main.33c99542.js",
+    "main.css": "/cohabit/static/css/main.573683df.css",
+    "main.js": "/cohabit/static/js/main.a92ec2ee.js",
     "static/media/portrait.jpg": "/cohabit/static/media/portrait.74dae534f81b87dca952.jpg",
     "static/media/storage_small.jpg": "/cohabit/static/media/storage_small.299c789e86f73c995421.jpg",
     "static/media/working_dining_table.jpg": "/cohabit/static/media/working_dining_table.9b918396f9b4da3096ee.jpg",
@@ -27,11 +27,11 @@
     "static/media/slick.ttf": "/cohabit/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/cohabit/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cohabit/index.html",
-    "main.fb86dc0b.css.map": "/cohabit/static/css/main.fb86dc0b.css.map",
-    "main.33c99542.js.map": "/cohabit/static/js/main.33c99542.js.map"
+    "main.573683df.css.map": "/cohabit/static/css/main.573683df.css.map",
+    "main.a92ec2ee.js.map": "/cohabit/static/js/main.a92ec2ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb86dc0b.css",
-    "static/js/main.33c99542.js"
+    "static/css/main.573683df.css",
+    "static/js/main.a92ec2ee.js"
   ]
 }
