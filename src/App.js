@@ -17,7 +17,7 @@ function App() {
     const [isValidEmail, setIsValidEmail] = useState(true);
     const [gatheredInfoAccepted, setGatheredInfoAccepted] = useState(true);
 
-    let [bundles, setBundles] = useState([
+    let [bundles] = useState([
         {
             id: 0,
             name: "Studio Bundle",
@@ -32,7 +32,7 @@ function App() {
     let [addOns] = useState([
         {
             id: 101,
-            name: "Upgrade to large single bed",
+            name: "Upgrade to: Large single bed",
             imageUrl: "large_single_bed.png",
             description:"Make the upgrade on the studio bundle by choosing a larger single bed",
             size:"105cm x 200cm",
@@ -43,7 +43,7 @@ function App() {
         },
         {
             id: 102,
-            name: "Upgrade to small double bed",
+            name: "Upgrade to: Small double bed",
             imageUrl: "small_double_bed.png",
             description:"Make the upgrade on the studio bundle by choosing a small double bed (140x200)",
             size:"120cm x 200cm",
@@ -54,7 +54,7 @@ function App() {
         },
         {
             id: 103,
-            name: "Upgrade to Standard double bed",
+            name: "Upgrade to: Standard double bed",
             imageUrl: "double_bed.png",
             description:"Make the upgrade on the studio bundle by choosing a standard double bed (160x200)",
             size:"140cm x 200cm",
@@ -65,7 +65,7 @@ function App() {
         },
         {
             id: 104,
-            name: "Upgrade to Two chairs",
+            name: "Upgrade to: Two chairs",
             imageUrl: "chair.jpg",
             description:"Make the upgrade on the studio bundle by choosing two chairs",
             cost: 50,
@@ -75,7 +75,7 @@ function App() {
         },
         {
             id: 105,
-            name: "Upgrade to 4 chairs",
+            name: "Upgrade to: 4 chairs",
             imageUrl: "chair.jpg",
             description:"Make the upgrade on the studio bundle by choosing four chairs",
             cost: 100,
@@ -85,7 +85,7 @@ function App() {
         },
         {
             id: 106,
-            name: "Upgrade to larger dining table",
+            name: "Upgrade to: Larger dining table",
             imageUrl: "large_table.jpg",
             description:"Make the upgrade on the studio bundle to a large dining table",
             cost: 100,
@@ -255,7 +255,7 @@ function App() {
         var month = ('0' + (currentDate.getMonth() + 1)).slice(-2); // Add leading zero if month < 10
         var day = ('0' + currentDate.getDate()).slice(-2); // Add leading zero if day < 10
         return year + '-' + month + '-' + day;
-      }
+    }
 
     const [state, setState] = useState({
         name:"",
@@ -298,6 +298,120 @@ function App() {
         total:0,
         totalCost:0,
     }
+    const initialProducts = [
+        {
+            id: 1,
+            name: "Single Bed",
+            description: "80/90cm x 200cm",
+            imageUrl: "single_bed.png",
+            cost: 199,
+            type:'singleItem',
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/single_bed.png?raw=true',
+        },
+        {
+            id: 12,
+            name: "Large Single Bed",
+            description: "105cm x 200cm",
+            imageUrl: "large_single_bed.png",
+            cost: 199,
+            type:'singleItem',
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/large_single_bed.png?raw=true',
+        },
+        {
+            id: 2,
+            name: "Small Double Bed",
+            description: "120cm x 200cm",
+            imageUrl: "small_double_bed.png",
+            cost: 299,
+            type:'singleItem',
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/small_double_bed.png?raw=true'
+        },
+        {
+            id: 3,
+            name: "Double Bed",
+            description: "140cm x 200cm",
+            imageUrl: "double_bed.png",
+            type:'singleItem',
+            cost: 399,
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/double_bed.png?raw=true'
+        },
+        {
+            id: 4,
+            name: "Table (Small)",
+            imageUrl: "small_table.jpg",
+            type:'singleItem',
+            cost: 99,
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/small_table.jpg?raw=true'
+        },
+        {
+            id: 5,
+            name: "Table (Large)",
+            imageUrl: "large_table.jpg",
+            type:'singleItem',
+            cost: 149,
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/large_table.jpg?raw=true'
+        },
+        {
+            id: 6,
+            name: "Chair",
+            imageUrl: "chair.jpg",
+            type:'singleItem',
+            cost: 50,
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/chair.jpg?raw=true',
+        },
+        {
+            id: 7,
+            name: "Professional/Working Chair",
+            type:'singleItem',
+            imageUrl: "work_chair.jpg",
+            cost: 100,
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/work_chair.jpg?raw=true'
+        },
+        {
+            id: 8,
+            name: "Bedside Storage (Small)",
+            imageUrl: "bedside_storage.png",
+            type:'singleItem',
+            cost: 50,
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/bedside_storage.png?raw=true'
+        },
+        {
+            id: 9,
+            name: "Shelf/Storage (Medium)",
+            imageUrl: "storage_medium.png",
+            type:'singleItem',
+            cost: 100,
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/storage_medium.png?raw=true'
+        },
+        {
+            id: 10,
+            name: "Shelf/Storage (Large)",
+            imageUrl: "storage_large.png",
+            type:'singleItem',
+            cost: 150,
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/storage_large.png?raw=true'
+        },
+        {
+            id: 11,
+            name: "Lights",
+            imageUrl: "lights.png",
+            type:'singleItem',
+            cost: 50,
+            quantity:1,
+            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/lights.png?raw=true'
+        }
+    ]
 
     const images = [
         'https://cohabit.se/wp-content/uploads/2023/07/1-300x300.png',
@@ -400,25 +514,13 @@ function App() {
     }
 
     const checkInputs = (field) => {
-        // case 'customerInfo':
-        //     if (state.name !== "" && state.emailWithoutDomain !== "" && state.address !== "" && state.phonenumber !== 0 && state.period !== "") {
-        //         setCurrentSection("products");
-        //         setActiveTitle("Products");
-        //     }else{
-        //         setResponse("Please fill all the required fields!");
-        //         setTimeout(() => {
-        //             setResponse("");
-        //         }, 3000);
-        //     }
-        //     break;
-
         switch(field){
             case 'products':
                 if (state.total > 0) {
                     setCurrentSection("customerInfo");
                     setActiveTitle("Customer Information");
                 }else{
-                    setResponse("Please pick the furniture you want!");
+                    setResponse("please select your item/s to proceed!");
                     setTimeout(() => {
                         setResponse("");
                     }, 3000);
@@ -474,7 +576,7 @@ function App() {
     const removeFromOrderlist = (product) => {
         let newOrderlist = state.orderList;
 
-        if(newOrderlist.includes(product)){
+        if(state.orderList.some(item => item.name === product.name)){
             newOrderlist.splice(newOrderlist.indexOf(product), 1);
             let currentPrice = parseFloat(state.total);
 
@@ -536,30 +638,40 @@ function App() {
         let updatedProduct = product;
         updatedProduct.quantity = quantity;
 
-        if (product.type === "bundle") {
-            const updatedBundles = bundles.map(bundle => {
-                if (bundle.id === product.id) {
-                    return { ...bundle, quantity: quantity };
-                } else {
-                    return bundle;
-                }
-            });
+        // if (product.type === "bundle") {
+        //     const updatedBundles = bundles.map(bundle => {
+        //         if (bundle.id === product.id) {
+        //             return { ...bundle, quantity: quantity };
+        //         } else {
+        //             return bundle;
+        //         }
+        //     });
 
-            setBundles(updatedBundles);
+        //     setBundles(updatedBundles);
 
-        } else {
-            const updatedProducts = products.map(item => {
-                if (item.id === product.id) {
-                    return { ...item, quantity: quantity };
-                } else {
-                    return item;
-                }
-            });
+        // } else {
+        //     const updatedProducts = products.map(item => {
+        //         if (item.id === product.id) {
+        //             return { ...item, quantity: quantity };
+        //         } else {
+        //             return item;
+        //         }
+        //     });
     
-            setProducts(updatedProducts);
-        }
+        //     setProducts(updatedProducts);
+        // }
+
+        const updatedProducts = products.map(item => {
+            if (item.id === product.id) {
+                return { ...item, quantity: quantity };
+            } else {
+                return item;
+            }
+        });
+
+        setProducts(updatedProducts);
         
-        if(state.orderList.includes(product)){
+        if(state.orderList.some(item => item.name === product.name)){
             updateOrderItem(product,updatedProduct);
         }
     };
@@ -611,6 +723,11 @@ function App() {
         }
 
         return {addonlist,priceToReduce};
+    }
+
+    const resetAll = () => {
+        setState(initialState); 
+        setProducts(initialProducts);
     }
 
   return (
@@ -719,17 +836,19 @@ function App() {
                                                             <div key={order.id} className='orderListReview'> 
                                                                 <div className='orderListReviewDetails'>
                                                                     <div className='costPart'>
-                                                                        <select className='emailEndPoint' onChange={(e) => handleProductsQuantity(order, e)} value={order.quantity}>
-                                                                            <option value="1">1</option>
-                                                                            <option value="2">2</option>
-                                                                            <option value="3">3</option>
-                                                                            <option value="4">4</option>
-                                                                            <option value="5">5</option>
-                                                                            <option value="6">6</option>
-                                                                            <option value="7">7</option>
-                                                                            <option value="8">8</option>
-                                                                            <option value="9">9</option>
-                                                                        </select>
+                                                                        {order.type !== "bundle" &&
+                                                                            <select className='emailEndPoint' onChange={(e) => handleProductsQuantity(order, e)} value={order.quantity}>
+                                                                                <option value="1">1</option>
+                                                                                <option value="2">2</option>
+                                                                                <option value="3">3</option>
+                                                                                <option value="4">4</option>
+                                                                                <option value="5">5</option>
+                                                                                <option value="6">6</option>
+                                                                                <option value="7">7</option>
+                                                                                <option value="8">8</option>
+                                                                                <option value="9">9</option>
+                                                                            </select>
+                                                                        }
                                                                         <p>{order.name}</p>
                                                                     </div>
 
@@ -774,10 +893,11 @@ function App() {
                                                                 
                                                                 {state.orderList.includes(bundle) ? 
                                                                     <>
+                                                                        <button className='removeOrderOnSingleItem' onClick={()=> removeFromOrderlist(bundle)}>X</button>
                                                                         <div className='productText selectProductBtn' style={{background:'black', cursor:'default'}}>&#x2713;</div>
                                                                     </>
                                                                     :
-                                                                    <button className='productText selectProductBtn' onClick={() => addToOrderlist(bundle)}>+</button>
+                                                                    <button className='productText selectProductBtn selectInListProductBtn' onClick={() => addToOrderlist(bundle)}>+</button>
                                                                 }
                                                             </div>
                                                         )
@@ -795,12 +915,28 @@ function App() {
                                                                         {product.description && 
                                                                             <p className='productDesc'>{product.description}</p>
                                                                         }
+                                                                        <div className="quantitySelection">
+                                                                            <select className='emailEndPoint' onChange={(e) => handleProductsQuantity(product, e)} value={product.quantity}>
+                                                                                <option value="1">1</option>
+                                                                                <option value="2">2</option>
+                                                                                <option value="3">3</option>
+                                                                                <option value="4">4</option>
+                                                                                <option value="5">5</option>
+                                                                                <option value="6">6</option>
+                                                                                <option value="7">7</option>
+                                                                                <option value="8">8</option>
+                                                                                <option value="9">9</option>
+                                                                            </select>
+                                                                        </div>
                                                                         <h5 className='productText'>{product.cost} SEK</h5>
                                                                     </div>
-                                                                    {state.orderList.includes(product) ? 
-                                                                        <div className='productText selectProductBtn' style={{background:'black', cursor:'default'}}>&#x2713;</div>
+                                                                    {state.orderList.some(item => item.name === product.name) ? 
+                                                                        <>
+                                                                            <button className='removeOrderOnSingleItem' onClick={()=> removeFromOrderlist(product)}>X</button>
+                                                                            <div className='productText selectProductBtn' style={{background:'black', cursor:'default'}}>&#x2713;</div>
+                                                                        </>
                                                                         :
-                                                                        <button className='productText selectProductBtn' onClick={() => addToOrderlist(product)}>+</button>
+                                                                        <button className='productText selectProductBtn selectInListProductBtn' onClick={() => addToOrderlist(product)}>+</button>
                                                                     }
                                                             </div>
                                                         )
@@ -957,20 +1093,34 @@ function App() {
                                             {state.orderList.map(order=>{
                                                 return (
                                                     <div key={order.id} className="summary-wrapper order-wrapper">
-                                                        <div className='orderTitleAndCost'>
-                                                            <h4>{order.name}</h4>
-                                                            <h5>{order.cost} SEK</h5>
+                                                        <div className="orderContainer">
+                                                            <div className="imageContainerOfItem">
+                                                                <img className='summaryOrderImg' src={require(`./assets/furnitures/${order.imageUrl}`)} alt={order.name} />
+                                                            </div>
+                                                            <div className="orderItemContent">
+                                                                <div className='orderTitleAndCost'>
+                                                                    <h4>{order.name}</h4>
+                                                                    <h5>{order.cost} SEK</h5>
+                                                                </div>
+                                                                {order.description &&
+                                                                    <p style={{fontWeight:'normal'}}>{order.description}</p>
+                                                                }
+                                                            </div>
                                                         </div>
-                                                        {order.description &&
-                                                            <p style={{fontWeight:'normal'}}>{order.description}</p>
-                                                        }
                                                         {(order.type === "bundle" && state.addOnsList.length > 0) && 
                                                             <div className='orderSummaryAddOnsPart'>
                                                                 {state.addOnsList.map(addOn => {
                                                                     return (
-                                                                        <div key={addOn.id} className='orderTitleAndCost'>
-                                                                            <h5>{addOn.name}</h5>
-                                                                            <h5>{addOn.cost} SEK</h5>
+                                                                        <div key={addOn.id} className='orderContainer'>
+                                                                             <div className="imageContainerOfItem">
+                                                                                <img className='summaryOrderImg' src={require(`./assets/furnitures/${addOn.imageUrl}`)} alt={order.name} />
+                                                                            </div>
+                                                                            <div className="orderItemContent">
+                                                                                <div className='orderTitleAndCost'>
+                                                                                    <h5>{addOn.name}</h5>
+                                                                                    <h5>{addOn.cost} SEK</h5>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     )
                                                                 })}
@@ -985,7 +1135,7 @@ function App() {
                                                 <p>{state.total}.00 SEK / Month</p>
                                             </div>
                                             <div className="summary-wrapper" style={{borderBottom: '1px solid black', paddingBottom: '15px'}}>
-                                                <p>Delivery Fee</p>
+                                                <p>Delivery & Setup Charges</p>
                                                 <p>{state.deliveryCharge}.00 SEK</p>
                                             </div>
                                             <div className="summary-wrapper" style={{fontWeight:'bold', fontSize:'18px'}}>
@@ -1009,12 +1159,16 @@ function App() {
                                                 <p>{state.email}</p>
                                             </div>
                                             <div className="summary-wrapper">
-                                                <p>Rental Period</p>
-                                                <p>{state.period}</p>
-                                            </div>
-                                            <div className="summary-wrapper">
                                                 <p>Address</p>
                                                 <p>{state.address}</p>
+                                            </div>
+                                            <div className="summary-wrapper">
+                                                <p>Postcode</p>
+                                                <p>{state.postcode}</p>
+                                            </div>
+                                            <div className="summary-wrapper">
+                                                <p>Rental Period</p>
+                                                <p>{state.period}</p>
                                             </div>
                                             <div className="summary-wrapper">
                                                 <p>Preferred Delivery Date</p>
@@ -1035,18 +1189,18 @@ function App() {
                                         
                                         <div className="summary-wrapper" style={{ justifyContent:"center", flexDirection:'row', gap:'10px', alignItems:'center', fontWeight:'bold', marginTop:'20px',marginBottom:'25px'}}>
                                             <input type="checkbox" id="userConsent" name="userConsent" onChange={handleCheckBoxChange} checked={state.userConsent}/>
-                                            <label htmlFor="userConsent" className='userContentLabel'>I agree that the gathered information can be used for further communication with Cohabit *</label>
+                                            <label htmlFor="userConsent" className='userContentLabel'>I agree that the gathered information can be used for further communication with Cohabit <span style={{color:'red'}}>*</span></label>
                                         </div>
                                         {!gatheredInfoAccepted && 
                                             <p className='gatheredInfoNotAccepted'>
-                                                Please confirm that given information are correct!
+                                                This field is required!
                                             </p>
                                         }
                                     </div>
                                     <div className="navigateBtns">
                                         <button className="btn backBtn" onClick={()=> {setCurrentSection("customerInfo"); setActiveTitle("Customer Information")}}>Back</button>
                                         <button className='btn submitBtn' onClick={sendOrder} disabled={loading}>
-                                            {!loading ? "Submit" : 
+                                            {!loading ? "Place order" : 
                                                 <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                                             }
                                         </button>
@@ -1079,7 +1233,7 @@ function App() {
                                         <p>Kind regards,</p>
                                         <p>Cohabit Team!</p>
                                     </div>
-                                    <button className='btn newOrderBtn' onClick={()=> {setOrderMade(""); setActiveTitle("Products"); setState(initialState)}}>New Order</button>
+                                    <button className='btn newOrderBtn' onClick={()=> {setOrderMade(""); setActiveTitle("Products"); resetAll();}}>Place another order</button>
                                 </div>
                                 <p className='attention'>If you did not receive an email, kindly check your spam folder or reach out to us through <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a></p>
                             </div>

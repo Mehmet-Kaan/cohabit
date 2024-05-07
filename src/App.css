@@ -331,11 +331,13 @@ html {
 .orderlistItemText {
 	margin: 0;
 }
-.removeOrder {
+
+.removeOrder, .removeOrderOnSingleItem {
 	position: absolute;
 	right: 8px;
 	top: 8px;
 	color: white;
+	background-color: red;
 	font-weight: bolder;
 	font-size: 13px;
 	transition: all .2s ease-in-out;
@@ -344,9 +346,21 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: red;
+	z-index: 111;
 }
-
+.removeOrder:hover, .removeOrderOnSingleItem:hover{
+	color: red;
+	background-color: unset;
+	scale: 1.2;
+}
+.removeOrderOnSingleItem {
+	right: 0;
+	top: 0;
+	padding: 10px;
+	font-size: 15px;
+	font-weight: bolder;
+	border-top-right-radius: 20px;
+}
 .selectProductBtn {
 	border: none;
 	padding: 10px;
@@ -375,10 +389,16 @@ html {
 }
 .submitBtn {
   height: 40px;
-  width: 70px;
+  width: 105px;
 }
 .submitBtn:hover, .newOrderBtn:hover, .selectProductBtn:hover{
   background-color: black;
+}
+.selectInListProductBtn:hover{
+	scale: 1.2;
+	font-size: 18px;
+  	color: black;
+  	background-color: unset;
 }
 .backToProductTypeSelection {
 	position: absolute;
@@ -456,16 +476,26 @@ html {
 .summary-wrapper p:last-child{
 	font-weight: bold;
 }
-/* .order-wrapper {
-	flex-direction: column;
-	border-left: 1px solid black;
-	padding: 10px 0px 10px 10px;
-	gap: 15px;
-} */
 .order-wrapper {
 	flex-direction: column;
-	padding: 10px 0px 10px 0px;
 	gap: 15px;
+}
+.orderContainer {
+	display: flex;
+	justify-content: space-between;
+}
+.imageContainerOfItem{
+	width: 20%;
+  	max-width: 50px;
+}
+.summaryOrderImg{
+	width: 100%;
+}
+.orderItemContent {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .orderTitleAndCost{
 	display: flex;
@@ -636,19 +666,19 @@ html {
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 .lds-ellipsis div:nth-child(1) {
-  left: 0px;
+  left: 15px;
   animation: lds-ellipsis1 0.6s infinite;
 }
 .lds-ellipsis div:nth-child(2) {
-  left: 0px;
+  left: 15px;
   animation: lds-ellipsis2 0.6s infinite;
 }
 .lds-ellipsis div:nth-child(3) {
-  left: 20px;
+  left: 40px;
   animation: lds-ellipsis2 0.6s infinite;
 }
 .lds-ellipsis div:nth-child(4) {
-  left: 40px;
+  left: 60px;
   animation: lds-ellipsis3 0.6s infinite;
 }
 @keyframes lds-ellipsis1 {
@@ -796,6 +826,18 @@ html {
 		color: black;
 		font-size: 20px;
 		text-align: right;
+	}
+	.removeOrderOnSingleItem{
+		left: 12px;
+		top: 12px;
+	}
+	.quantitySelection{
+		position: absolute;
+		bottom: 45px;
+		right: 10px;
+	}
+	.quantitySelection > .emailEndPoint {
+		color: white;
 	}
 	.selectProductBtn{
 		top: 12px;
