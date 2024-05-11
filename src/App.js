@@ -909,7 +909,7 @@ function App() {
                                                                         <div className='productText selectProductBtn' style={{background:'black', cursor:'default'}}>&#x2713;</div>
                                                                     </>
                                                                     :
-                                                                    <button className='productText selectProductBtn selectInListProductBtn' onClick={() => addToOrderlist(bundle)}>+</button>
+                                                                    <button className='productText selectProductBtn selectInListProductBtn' onClick={() => addToOrderlist(bundle)}>Add +</button>
                                                                 }
                                                             </div>
                                                         )
@@ -952,7 +952,7 @@ function App() {
                                                                         :
                                                                         <>
                                                                             {/* <p className='addItemToListBtn'>Add</p> */}
-                                                                            <button className='productText selectProductBtn selectInListProductBtn' onClick={() => addToOrderlist(product)}>+ Add</button>
+                                                                            <button className='productText selectProductBtn selectInListProductBtn' onClick={() => addToOrderlist(product)}>Add +</button>
                                                                         </>
                                                                     }
                                                             </div>
@@ -1163,6 +1163,7 @@ function App() {
                                                 <p>Total</p>
                                                 <p>{state.totalCost}.00 SEK</p>
                                             </div>
+                                            <p style={{fontStyle:'italic', margin:'0', marginTop:'-10px', fontSize:'13px'}}>All prices are inclusive of taxes.</p>
                                         </div>
 
                                         <h3 className='subTitle'>Customer Information <span onClick={() => {setActiveProducts("notSelected"); setCurrentSection("customerInfo"); setActiveTitle("Customer Information")}}>&#x270E;</span></h3>

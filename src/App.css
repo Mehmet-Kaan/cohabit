@@ -68,12 +68,12 @@ html {
 .btn:hover{
   background-color: black;
 }
-.backBtn{
+/* .backBtn{
 
 }
 .nextBtn{
 
-}
+} */
 .inputsBox {
 	width: 90%;
 	display: flex;
@@ -381,12 +381,12 @@ html {
 	border-bottom-right-radius: 20px;
 	z-index: 1;
 }
-.addItemToListBtn{
+/* .addItemToListBtn{
 	margin: 0;
 	position: absolute;
 	bottom: 10px;
-	right: 50px;
-}
+	right: 40px;
+} */
 .orderlistTitle{
 	display: flex;
 	justify-content: space-between;
@@ -498,16 +498,17 @@ html {
 }
 .imageContainerOfItem{
 	width: 20%;
-  	max-width: 50px;
+  	max-width: 90px;
 }
 .summaryOrderImg{
 	width: 100%;
 }
 .orderItemContent {
-	width: 90%;
+	width: 85%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	gap: 10px;
 }
 .orderTitleAndCost{
 	display: flex;
@@ -948,6 +949,10 @@ html {
 	}
 	.orderListReview {
 		width: 100%;
+	}
+	.imageContainerOfItem {
+		width: 12%;
+		max-width: 50px;
 	}
 	.addOn{
 		padding-left: 0px;
