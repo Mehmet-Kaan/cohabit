@@ -204,7 +204,7 @@ function App() {
         },
         {
             id: 7,
-            name: "Professional/Working Chair",
+            name: "Working Chair",
             type:'singleItem',
             imageUrl: "work_chair.jpg",
             cost: 100,
@@ -251,6 +251,7 @@ function App() {
 
     const getCurrentDate = () => {
         var currentDate = new Date();
+        currentDate.setDate(currentDate.getDate() + 3); // Add 3 days to the current date
         var year = currentDate.getFullYear();
         var month = ('0' + (currentDate.getMonth() + 1)).slice(-2); // Add leading zero if month < 10
         var day = ('0' + currentDate.getDate()).slice(-2); // Add leading zero if day < 10
@@ -278,140 +279,140 @@ function App() {
         totalCost:0,
     });
 
-    const initialState = {
-        name:"",
-        email:"",
-        emailWithoutDomain:"",
-        domain:"@hotmail.com",
-        wpnumber:false,
-        phonenumber:"+46",
-        period:"",
-        address:"",
-        postcode:"",
-        deliveryCharge:400,
-        orderList:[],
-        addOnsList:[],
-        deliveryDate:getCurrentDate(),
-        timePreference:"",
-        anythingElse:"",
-        userConsent:false,
-        total:0,
-        totalCost:0,
-    }
-    const initialProducts = [
-        {
-            id: 1,
-            name: "Single Bed",
-            description: "80/90cm x 200cm",
-            imageUrl: "single_bed.png",
-            cost: 199,
-            type:'singleItem',
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/single_bed.png?raw=true',
-        },
-        {
-            id: 12,
-            name: "Large Single Bed",
-            description: "105cm x 200cm",
-            imageUrl: "large_single_bed.png",
-            cost: 199,
-            type:'singleItem',
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/large_single_bed.png?raw=true',
-        },
-        {
-            id: 2,
-            name: "Small Double Bed",
-            description: "120cm x 200cm",
-            imageUrl: "small_double_bed.png",
-            cost: 299,
-            type:'singleItem',
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/small_double_bed.png?raw=true'
-        },
-        {
-            id: 3,
-            name: "Double Bed",
-            description: "140cm x 200cm",
-            imageUrl: "double_bed.png",
-            type:'singleItem',
-            cost: 399,
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/double_bed.png?raw=true'
-        },
-        {
-            id: 4,
-            name: "Table (Small)",
-            imageUrl: "small_table.jpg",
-            type:'singleItem',
-            cost: 99,
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/small_table.jpg?raw=true'
-        },
-        {
-            id: 5,
-            name: "Table (Large)",
-            imageUrl: "large_table.jpg",
-            type:'singleItem',
-            cost: 149,
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/large_table.jpg?raw=true'
-        },
-        {
-            id: 6,
-            name: "Chair",
-            imageUrl: "chair.jpg",
-            type:'singleItem',
-            cost: 50,
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/chair.jpg?raw=true',
-        },
-        {
-            id: 7,
-            name: "Professional/Working Chair",
-            type:'singleItem',
-            imageUrl: "work_chair.jpg",
-            cost: 100,
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/work_chair.jpg?raw=true'
-        },
-        {
-            id: 8,
-            name: "Bedside Storage (Small)",
-            imageUrl: "bedside_storage.png",
-            type:'singleItem',
-            cost: 50,
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/bedside_storage.png?raw=true'
-        },
-        {
-            id: 9,
-            name: "Shelf/Storage (Medium)",
-            imageUrl: "storage_medium.png",
-            type:'singleItem',
-            cost: 100,
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/storage_medium.png?raw=true'
-        },
-        {
-            id: 10,
-            name: "Shelf/Storage (Large)",
-            imageUrl: "storage_large.png",
-            type:'singleItem',
-            cost: 150,
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/storage_large.png?raw=true'
-        },
-        {
-            id: 11,
-            name: "Lights",
-            imageUrl: "lights.png",
-            type:'singleItem',
-            cost: 50,
-            quantity:1,
-            githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/lights.png?raw=true'
-        }
-    ]
+    // const initialState = {
+    //     name:"",
+    //     email:"",
+    //     emailWithoutDomain:"",
+    //     domain:"@hotmail.com",
+    //     wpnumber:false,
+    //     phonenumber:"+46",
+    //     period:"",
+    //     address:"",
+    //     postcode:"",
+    //     deliveryCharge:400,
+    //     orderList:[],
+    //     addOnsList:[],
+    //     deliveryDate:getCurrentDate(),
+    //     timePreference:"",
+    //     anythingElse:"",
+    //     userConsent:false,
+    //     total:0,
+    //     totalCost:0,
+    // }
+    // const initialProducts = [
+    //     {
+    //         id: 1,
+    //         name: "Single Bed",
+    //         description: "80/90cm x 200cm",
+    //         imageUrl: "single_bed.png",
+    //         cost: 199,
+    //         type:'singleItem',
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/single_bed.png?raw=true',
+    //     },
+    //     {
+    //         id: 12,
+    //         name: "Large Single Bed",
+    //         description: "105cm x 200cm",
+    //         imageUrl: "large_single_bed.png",
+    //         cost: 199,
+    //         type:'singleItem',
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/large_single_bed.png?raw=true',
+    //     },
+    //     {
+    //         id: 2,
+    //         name: "Small Double Bed",
+    //         description: "120cm x 200cm",
+    //         imageUrl: "small_double_bed.png",
+    //         cost: 299,
+    //         type:'singleItem',
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/small_double_bed.png?raw=true'
+    //     },
+    //     {
+    //         id: 3,
+    //         name: "Double Bed",
+    //         description: "140cm x 200cm",
+    //         imageUrl: "double_bed.png",
+    //         type:'singleItem',
+    //         cost: 399,
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/double_bed.png?raw=true'
+    //     },
+    //     {
+    //         id: 4,
+    //         name: "Table (Small)",
+    //         imageUrl: "small_table.jpg",
+    //         type:'singleItem',
+    //         cost: 99,
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/small_table.jpg?raw=true'
+    //     },
+    //     {
+    //         id: 5,
+    //         name: "Table (Large)",
+    //         imageUrl: "large_table.jpg",
+    //         type:'singleItem',
+    //         cost: 149,
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/large_table.jpg?raw=true'
+    //     },
+    //     {
+    //         id: 6,
+    //         name: "Chair",
+    //         imageUrl: "chair.jpg",
+    //         type:'singleItem',
+    //         cost: 50,
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/chair.jpg?raw=true',
+    //     },
+    //     {
+    //         id: 7,
+    //         name: "Professional/Working Chair",
+    //         type:'singleItem',
+    //         imageUrl: "work_chair.jpg",
+    //         cost: 100,
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/work_chair.jpg?raw=true'
+    //     },
+    //     {
+    //         id: 8,
+    //         name: "Bedside Storage (Small)",
+    //         imageUrl: "bedside_storage.png",
+    //         type:'singleItem',
+    //         cost: 50,
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/bedside_storage.png?raw=true'
+    //     },
+    //     {
+    //         id: 9,
+    //         name: "Shelf/Storage (Medium)",
+    //         imageUrl: "storage_medium.png",
+    //         type:'singleItem',
+    //         cost: 100,
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/storage_medium.png?raw=true'
+    //     },
+    //     {
+    //         id: 10,
+    //         name: "Shelf/Storage (Large)",
+    //         imageUrl: "storage_large.png",
+    //         type:'singleItem',
+    //         cost: 150,
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/storage_large.png?raw=true'
+    //     },
+    //     {
+    //         id: 11,
+    //         name: "Lights",
+    //         imageUrl: "lights.png",
+    //         type:'singleItem',
+    //         cost: 50,
+    //         quantity:1,
+    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/lights.png?raw=true'
+    //     }
+    // ]
 
     const images = [
         'https://cohabit.se/wp-content/uploads/2023/07/1-300x300.png',
@@ -517,10 +518,15 @@ function App() {
         switch(field){
             case 'products':
                 if (state.total > 0) {
-                    setCurrentSection("customerInfo");
-                    setActiveTitle("Customer Information");
+                    //If on bundles or single items page, send customers to listpage (products page)
+                    if(activeProducts === 'others' || activeProducts === 'bundles'){
+                        setActiveProducts('notSelected');
+                    }else{
+                        setCurrentSection("customerInfo");
+                        setActiveTitle("Customer Information");
+                    }
                 }else{
-                    setResponse("please select your item/s to proceed!");
+                    setResponse("Please select your item/s to proceed!");
                     setTimeout(() => {
                         setResponse("");
                     }, 3000);
@@ -725,10 +731,10 @@ function App() {
         return {addonlist,priceToReduce};
     }
 
-    const resetAll = () => {
-        setState(initialState); 
-        setProducts(initialProducts);
-    }
+    // const resetAll = () => {
+    //     setState(initialState); 
+    //     setProducts(initialProducts);
+    // }
 
   return (
     <div className="App">
@@ -797,7 +803,13 @@ function App() {
                                                 <div className="productSelectionDiv">
                                                     <h3>Bundles</h3>
                                                     <div className='orderlistBox'>
-                                                        <div className='activeProductsBtn' onClick={()=> setActiveProducts("bundles")}>+</div>
+                                                        <div className='activeProductsBtn' onClick={()=> 
+                                                            {
+                                                                // setActiveProducts("bundles");
+
+                                                                addToOrderlist(bundles[0]);
+                                                            }
+                                                            }>+</div>
                                                         {state.orderList.filter(order => order.type === "bundle").map(order => {
                                                             return (
                                                                 <div key={order.id} className="orderlistItem">
@@ -916,7 +928,9 @@ function App() {
                                                                             <p className='productDesc'>{product.description}</p>
                                                                         }
                                                                         <div className="quantitySelection">
-                                                                            <select className='emailEndPoint' onChange={(e) => handleProductsQuantity(product, e)} value={product.quantity}>
+                                                                            <label className='longerQty'>Quantity: </label>
+                                                                            <label className='shortenQty'>Qty: </label>
+                                                                            <select className='emailEndPoint' style={{fontSize:'15px'}} onChange={(e) => handleProductsQuantity(product, e)} value={product.quantity}>
                                                                                 <option value="1">1</option>
                                                                                 <option value="2">2</option>
                                                                                 <option value="3">3</option>
@@ -928,7 +942,7 @@ function App() {
                                                                                 <option value="9">9</option>
                                                                             </select>
                                                                         </div>
-                                                                        <h5 className='productText'>{product.cost} SEK</h5>
+                                                                        <p className='productPriceP'>Price / month: <span style={{fontWeight:'bold'}}>{product.cost} SEK</span></p>
                                                                     </div>
                                                                     {state.orderList.some(item => item.name === product.name) ? 
                                                                         <>
@@ -936,7 +950,10 @@ function App() {
                                                                             <div className='productText selectProductBtn' style={{background:'black', cursor:'default'}}>&#x2713;</div>
                                                                         </>
                                                                         :
-                                                                        <button className='productText selectProductBtn selectInListProductBtn' onClick={() => addToOrderlist(product)}>+</button>
+                                                                        <>
+                                                                            {/* <p className='addItemToListBtn'>Add</p> */}
+                                                                            <button className='productText selectProductBtn selectInListProductBtn' onClick={() => addToOrderlist(product)}>+ Add</button>
+                                                                        </>
                                                                     }
                                                             </div>
                                                         )
@@ -958,101 +975,104 @@ function App() {
                                 currentSection === "customerInfo" ?
                                 <>
                                  <div className="inputsBox">
-                                        <div className="input-wrapper">
-                                            <label htmlFor="name">Full Name <span style={{color:'red'}}>*</span></label>
-                                            <input 
-                                                id="name" 
-                                                type="text" 
-                                                name='name' 
+                                    <div className="input-wrapper">
+                                        <label htmlFor="name">Full Name <span style={{color:'red'}}>*</span></label>
+                                        <input 
+                                            id="name" 
+                                            type="text" 
+                                            name='name' 
+                                            onKeyPress={(e) => {
+                                                if (!((e.charCode >= 65 && e.charCode <= 90) || (e.charCode >= 97 && e.charCode <= 122) || e.charCode === 32)) {
+                                                    e.preventDefault();
+                                                }
+                                            }}
+                                            onChange={handleChange} value={state.name}/>
+                                    </div>
+                                    <div className="input-wrapper">
+                                        <label htmlFor="phonenumber">Phone Number <span style={{color:'red'}}>*</span></label>
+                                        <input 
+                                            id="phonenumber" 
+                                            type="text" 
+                                            onKeyPress={(e) => {
+                                                if (!(e.charCode >= 48 && e.charCode <= 57) && !(e.charCode === 43)) {
+                                                e.preventDefault();
+                                                }
+                                            }}
+                                            onPaste={(e) => e.preventDefault()} 
+                                            onDrop={(e) => e.preventDefault()} 
+                                            name="phonenumber" 
+                                            onChange={handleChange} 
+                                            value={state.phonenumber}
+                                            />
+                                    </div>
+                                    <div className="input-wrapper">
+                                        <label htmlFor="email">Email <span style={{color:'red'}}>*</span></label>
+                                        
+                                        <div className='emailInputBox'>
+                                            <input id="email" type="text" name='email' placeholder=''
                                                 onKeyPress={(e) => {
-                                                    if (!((e.charCode >= 65 && e.charCode <= 90) || (e.charCode >= 97 && e.charCode <= 122) || e.charCode === 32)) {
+                                                    if (e.charCode === 32) {
                                                         e.preventDefault();
                                                     }
                                                 }}
-                                                onChange={handleChange} value={state.name}/>
-                                        </div>
-                                        <div className="input-wrapper">
-                                            <label htmlFor="phonenumber">Phone Number <span style={{color:'red'}}>*</span></label>
-                                            <input 
-                                                id="phonenumber" 
-                                                type="text" 
-                                                onKeyPress={(e) => {
-                                                    if (!(e.charCode >= 48 && e.charCode <= 57) && !(e.charCode === 43)) {
-                                                    e.preventDefault();
-                                                    }
-                                                }}
-                                                onPaste={(e) => e.preventDefault()} 
-                                                onDrop={(e) => e.preventDefault()} 
-                                                name="phonenumber" 
-                                                onChange={handleChange} 
-                                                value={state.phonenumber}
-                                                />
-                                        </div>
-                                        <div className="input-wrapper">
-                                            <label htmlFor="email">Email <span style={{color:'red'}}>*</span></label>
-                                            
-                                            <div className='emailInputBox'>
-                                                <input id="email" type="text" name='email' placeholder=''
-                                                   onKeyPress={(e) => {
-                                                        if (e.charCode === 32) {
-                                                            e.preventDefault();
-                                                        }
-                                                    }}
-                                                    onChange={handleChange}
-                                                    value={state.email}/>
-                                            </div>
-                                        </div>
-                                        {!isValidEmail && 
-                                            <p className='notValidEmail' style={{color: 'red', width: '50%', marginTop: '-10px', fontSize: '14px', textAlign: 'right'}}>
-                                                Please enter a valid email address
-                                            </p>
-                                        }
-                                        <div className="input-wrapper">
-                                            <label htmlFor="address">Address <span style={{color:'red'}}>*</span></label>
-                                            <input id="address" type="text" name='address' onChange={handleChange} value={state.address}/>
-                                        </div>
-                                        <div className="input-wrapper">
-                                            <label htmlFor="postcode">Postcode <span style={{color:'red'}}>*</span></label>
-                                            <input 
-                                                id="postcode" 
-                                                type="text" 
-                                                onKeyPress={(e) => {
-                                                    if (!(e.charCode >= 48 && e.charCode <= 57) && e.charCode !== 32) {
-                                                    e.preventDefault();
-                                                    }
-                                                }}
-                                                onPaste={(e) => e.preventDefault()} 
-                                                onDrop={(e) => e.preventDefault()} 
-                                                name="postcode" 
-                                                onChange={handleChange} 
-                                                value={state.postcode}
-                                                />
-                                        </div>
-                                        <div className="input-wrapper">
-                                            <label style={{lineHeight:'1.5', width:'70%'}} htmlFor="period">How long do you want to rent the furniture? <span style={{color:'red'}}>*</span></label>
-                                            <select id="period" className='emailEndPoint rentalSelect' name="period" onChange={handleChange} value={state.period} style={{ width: "90px" }}>
-                                                <option value="">- Months</option>
-                                                <option value="Below 3 Months">Below 3 Months</option>
-                                                <option value="3 Months">3 Months</option>
-                                                <option value="4 Months">4 Months</option>
-                                                <option value="5 Months">5 Months</option>
-                                                <option value="6 Months">6 Months</option>
-                                                <option value="7 Months">7 Months</option>
-                                                <option value="8 Months">8 Months</option>
-                                                <option value="9 Months">9 Months</option>
-                                                <option value="10 Months">10 Months</option>
-                                                <option value="11 Months">11 Months</option>
-                                                <option value="12 Months">12 Months</option>
-                                                <option value="13 Months">13 Months</option>
-                                                <option value="14 Months">14 Months</option>
-                                                <option value="15 Months">15 Months</option>
-                                                <option value="16 Months">16 Months</option>
-                                                <option value="17 Months">17 Months</option>
-                                                <option value="18 Months">18 Months</option>
-                                                <option value="Above 18 Months">Above 18 Months</option>
-                                            </select>
+                                                onChange={handleChange}
+                                                value={state.email}/>
                                         </div>
                                     </div>
+                                    {!isValidEmail && 
+                                        <p className='notValidEmail' style={{color: 'red', width: '50%', marginTop: '-10px', fontSize: '14px', textAlign: 'right'}}>
+                                            Please enter a valid email address
+                                        </p>
+                                    }
+                                    <div className="input-wrapper">
+                                        <label htmlFor="address">Address <span style={{color:'red'}}>*</span></label>
+                                        <input id="address" type="text" name='address' onChange={handleChange} value={state.address}/>
+                                    </div>
+                                    <div className="input-wrapper">
+                                        <label htmlFor="postcode">Postcode <span style={{color:'red'}}>*</span></label>
+                                        <input 
+                                            id="postcode" 
+                                            type="text" 
+                                            onKeyPress={(e) => {
+                                                if (!(e.charCode >= 48 && e.charCode <= 57) && e.charCode !== 32) {
+                                                e.preventDefault();
+                                                }
+                                            }}
+                                            onPaste={(e) => e.preventDefault()} 
+                                            onDrop={(e) => e.preventDefault()} 
+                                            name="postcode" 
+                                            onChange={handleChange} 
+                                            value={state.postcode}
+                                            />
+                                    </div>
+                                    <div className="input-wrapper">
+                                        <label style={{lineHeight:'1.5', width:'70%'}} htmlFor="period">How long do you want to rent the furniture? <span style={{color:'red'}}>*</span></label>
+                                        <select id="period" className='emailEndPoint rentalSelect' name="period" onChange={handleChange} value={state.period} style={{ width: "90px" }}>
+                                            <option value="">- Months</option>
+                                            <option value="3 Months">3 Months</option>
+                                            <option value="4 Months">4 Months</option>
+                                            <option value="5 Months">5 Months</option>
+                                            <option value="6 Months">6 Months</option>
+                                            <option value="7 Months">7 Months</option>
+                                            <option value="8 Months">8 Months</option>
+                                            <option value="9 Months">9 Months</option>
+                                            <option value="10 Months">10 Months</option>
+                                            <option value="11 Months">11 Months</option>
+                                            <option value="12 Months">12 Months</option>
+                                            <option value="13 Months">13 Months</option>
+                                            <option value="14 Months">14 Months</option>
+                                            <option value="15 Months">15 Months</option>
+                                            <option value="16 Months">16 Months</option>
+                                            <option value="17 Months">17 Months</option>
+                                            <option value="18 Months">18 Months</option>
+                                            <option value="Above 18 Months">Above 18 Months</option>
+                                        </select>
+                                    </div>
+                                                    
+                                    <div className='notice' style={{marginTop:'-20px'}}>
+                                        <p className='deliveryInfoP' style={{fontStyle:'italic'}}>For short term subscriptions below 3 months, please reach out to <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a></p>
+                                    </div>
+                                </div>
                                     <div className="inputsBox">
                                         <div className="input-wrapper">
                                             <label htmlFor="deliveryDate">Preferred Delivery Date <span style={{color:'red'}}>*</span></label>
@@ -1070,6 +1090,7 @@ function App() {
                                         </div>
                                                     
                                         <div className='notice'>
+                                           <p className='deliveryInfoP' style={{fontStyle:'italic'}}>For express deliveries, please reach out to <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a></p>
                                            <p className='deliveryInfoP' style={{marginBottom:'0px'}}>The standard delivery fee is 400 SEK.</p>
                                            <p className='deliveryInfoP' style={{marginTop:'5px'}}>Deliveries on weekends, special holidays, and after 17.00 will incur a special delivery fee of 600 SEK.</p>
                                         </div>
@@ -1233,7 +1254,8 @@ function App() {
                                         <p>Kind regards,</p>
                                         <p>Cohabit Team!</p>
                                     </div>
-                                    <button className='btn newOrderBtn' onClick={()=> {setOrderMade(""); setActiveTitle("Products"); resetAll();}}>Place another order</button>
+                                    {/* <button className='btn newOrderBtn' onClick={()=> {setOrderMade(""); setActiveTitle("Products");  setState(initialState); setProducts(initialProducts); resetAll();}}>Place another order</button> */}
+                                    <button className='btn newOrderBtn'><a style={{textDecoration:'none', color:'white'}} href="https://cohabit.se/" target='_blank' rel='noreferrer'>Visit Website</a></button>
                                 </div>
                                 <p className='attention'>If you did not receive an email, kindly check your spam folder or reach out to us through <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a></p>
                             </div>

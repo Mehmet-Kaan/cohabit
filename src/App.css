@@ -287,6 +287,12 @@ html {
 .productText{
 	color: black;
 }
+.shortenQty{
+	display: none;
+}
+.productPriceP{
+	margin-top: 25px;
+}
 .orderlistBox {
 	display: flex;
 	gap: 10px;
@@ -356,14 +362,14 @@ html {
 .removeOrderOnSingleItem {
 	right: 0;
 	top: 0;
-	padding: 10px;
+	padding: 13px;
 	font-size: 15px;
 	font-weight: bolder;
 	border-top-right-radius: 20px;
 }
 .selectProductBtn {
 	border: none;
-	padding: 10px;
+	padding: 13px;
 	background-color: #66C2C9;
 	color: white;
 	font-weight: bolder;
@@ -374,6 +380,12 @@ html {
   	right: 0px;
 	border-bottom-right-radius: 20px;
 	z-index: 1;
+}
+.addItemToListBtn{
+	margin: 0;
+	position: absolute;
+	bottom: 10px;
+	right: 50px;
 }
 .orderlistTitle{
 	display: flex;
@@ -412,7 +424,7 @@ html {
 	text-align: left;
 	max-width: 500px;
 	font-weight: 600;
-	font-size: 15px;
+	font-size: 12px;
 }
 .deliveryInfoP{
 	padding: 0px 15px;
@@ -812,6 +824,7 @@ html {
 		position: absolute;
 		bottom: 36px;
 		width: 265px;
+		font-size: 16px;
 	}
 	.productInfoB p {
 		display: none;
@@ -827,25 +840,42 @@ html {
 		font-size: 20px;
 		text-align: right;
 	}
-	.removeOrderOnSingleItem{
-		left: 12px;
-		top: 12px;
-	}
-	.quantitySelection{
+	.quantitySelection {
 		position: absolute;
-		bottom: 45px;
+		bottom: 42px;
+		right: 0px;
+		color: white;
+		font-size: 16px;
+	}
+	.quantitySelection > .longerQty{
+		display: none;
+	}
+	.quantitySelection > .shortenQty{
+		display: unset;
+	}
+	p.productPriceP{
+		display: unset;
+		position: absolute;
+		bottom: 9px;
 		right: 10px;
+		margin-bottom: 0;
+		margin-top: 0;
+		font-size: 16px;
 	}
 	.quantitySelection > .emailEndPoint {
 		color: white;
 	}
-	.selectProductBtn{
+	.selectProductBtn, .removeOrderOnSingleItem{
 		top: 12px;
 		right: 12px;
 		bottom: unset;
 		border-radius: 8px;
 		padding: 5px 10px;
 		font-size: 20px;
+	}
+	.removeOrderOnSingleItem{
+		left: 12px;
+		right: 0;
 	}
 	.backToProductTypeSelection {
 		top: 73px;
