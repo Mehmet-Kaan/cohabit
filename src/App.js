@@ -1092,7 +1092,7 @@ function App() {
                                            <p className='deliveryInfoP' style={{marginBottom:'0px'}}>The standard delivery fee is 400 SEK.</p>
                                            <p className='deliveryInfoP' style={{marginTop:'5px'}}>Deliveries on weekends, special holidays, and after 17.00 will incur a special delivery fee of 600 SEK.</p>
                                         </div>
-                                        <div className="input-wrapper" style={{marginTop:'20px', alignItems:'start'}}>
+                                        <div className="input-wrapper antyhingElseBox" style={{marginTop:'20px'}}>
                                             <label htmlFor="anythingElse" style={{paddingTop:'0'}}>Is there anything else you want us to know about your order?</label>
                                             <textarea id="anythingElse" type="text" name='anythingElse' onChange={handleChange} value={state.anythingElse}/>
                                         </div>

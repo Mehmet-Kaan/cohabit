@@ -418,6 +418,9 @@ html {
 	right: 30px;
 	z-index: 1;
 }
+.antyhingElseBox{
+	align-items: start;
+}
 .notice {
 	margin-top: 0;
 	width: 56%;
@@ -884,6 +887,9 @@ html {
 	}
 	.productText{
 		color: white;
+	}
+	.antyhingElseBox{
+		align-items: center;
 	}
 	.inputsBox{
 		min-height: 400px;
