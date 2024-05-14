@@ -1078,6 +1078,9 @@ function App() {
                                             <label htmlFor="deliveryDate">Preferred Delivery Date <span style={{color:'red'}}>*</span></label>
                                             <input id="deliveryDate" className='emailEndPoint dateAndTimePick' type="date" name='deliveryDate' min={getCurrentDate()} style={{width:"auto", minWidth: "auto", paddingRight:'0', fontWeight:'bold', borderBottom:'1px solid'}} onChange={handleChange} value={state.deliveryDate}/>
                                         </div>
+                                        <div className='notice'>
+                                           <p className='deliveryInfoP' style={{fontStyle:'italic'}}>For express deliveries, please reach out to <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a></p>
+                                        </div>
                                         <div className="input-wrapper" style={{marginBottom:'3px'}}>
                                             <label htmlFor="timePreference">Preferred Delivery Hour <span style={{color:'red'}}>*</span></label>
                                             <select id="timePreference" className='emailEndPoint deliveryHourPick' name="timePreference" onChange={handleChange} value={state.timePreference} style={{ width: "auto"}}>
@@ -1090,7 +1093,6 @@ function App() {
                                         </div>
                                                     
                                         <div className='notice'>
-                                           <p className='deliveryInfoP' style={{fontStyle:'italic'}}>For express deliveries, please reach out to <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a></p>
                                            <p className='deliveryInfoP' style={{marginBottom:'0px'}}>The standard delivery fee is 400 SEK.</p>
                                            <p className='deliveryInfoP' style={{marginTop:'5px'}}>Deliveries on weekends, special holidays, and after 17.00 will incur a special delivery fee of 600 SEK.</p>
                                         </div>
