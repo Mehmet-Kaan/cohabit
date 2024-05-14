@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cohabit/static/css/main.1acd4f97.css",
-    "main.js": "/cohabit/static/js/main.cc075c7b.js",
+    "main.js": "/cohabit/static/js/main.6dd22b28.js",
     "static/media/portrait.jpg": "/cohabit/static/media/portrait.74dae534f81b87dca952.jpg",
     "static/media/storage_small.jpg": "/cohabit/static/media/storage_small.299c789e86f73c995421.jpg",
     "static/media/working_dining_table.jpg": "/cohabit/static/media/working_dining_table.9b918396f9b4da3096ee.jpg",
@@ -28,10 +28,10 @@
     "static/media/slick.woff": "/cohabit/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cohabit/index.html",
     "main.1acd4f97.css.map": "/cohabit/static/css/main.1acd4f97.css.map",
-    "main.cc075c7b.js.map": "/cohabit/static/js/main.cc075c7b.js.map"
+    "main.6dd22b28.js.map": "/cohabit/static/js/main.6dd22b28.js.map"
   },
   "entrypoints": [
     "static/css/main.1acd4f97.css",
-    "static/js/main.cc075c7b.js"
+    "static/js/main.6dd22b28.js"
   ]
 }
