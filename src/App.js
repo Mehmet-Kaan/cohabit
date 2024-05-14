@@ -1045,8 +1045,8 @@ function App() {
                                             value={state.postcode}
                                             />
                                     </div>
-                                    <div className="input-wrapper">
-                                        <label style={{lineHeight:'1.5', width:'70%'}} htmlFor="period">How long do you want to rent the furniture? <span style={{color:'red'}}>*</span></label>
+                                    <div className="input-wrapper" style={{marginTop:'10px'}}>
+                                        <label style={{lineHeight:'1.5', width:'70%', paddingBottom:'0', paddingTop:'0'}} htmlFor="period">How long do you want to rent the furniture? <span style={{color:'red'}}>*</span></label>
                                         <select id="period" className='emailEndPoint rentalSelect' name="period" onChange={handleChange} value={state.period} style={{ width: "90px" }}>
                                             <option value="">- Months</option>
                                             <option value="3 Months">3 Months</option>
@@ -1068,21 +1068,17 @@ function App() {
                                             <option value="Above 18 Months">Above 18 Months</option>
                                         </select>
                                     </div>
-                                                    
-                                    <div className='notice' style={{marginTop:'-20px'}}>
-                                        <p className='deliveryInfoP' style={{fontStyle:'italic'}}>For short term subscriptions below 3 months, please reach out to <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a></p>
-                                    </div>
                                 </div>
                                     <div className="inputsBox">
-                                        <div className="input-wrapper">
-                                            <label htmlFor="deliveryDate">Preferred Delivery Date <span style={{color:'red'}}>*</span></label>
+                                        <div className="input-wrapper" style={{marginBottom:'0'}}>
+                                            <label htmlFor="deliveryDate" style={{paddingBottom:'0'}}>Preferred Delivery Date <span style={{color:'red'}}>*</span></label>
                                             <input id="deliveryDate" className='emailEndPoint dateAndTimePick' type="date" name='deliveryDate' min={getCurrentDate()} style={{width:"auto", minWidth: "auto", paddingRight:'0', fontWeight:'bold', borderBottom:'1px solid'}} onChange={handleChange} value={state.deliveryDate}/>
                                         </div>
-                                        <div className='notice'>
-                                           <p className='deliveryInfoP' style={{fontStyle:'italic'}}>For express deliveries, please reach out to <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a></p>
+                                        <div className='notice' style={{marginTop:'5px'}}>
+                                           <p className='deliveryInfoP' style={{fontStyle:'italic'}}>For short-term rental periods below 3 months and express deliveries <br></br> please reach out to <a className='link' href="mailto:hello@cohabit.se">hello@cohabit.se</a></p>
                                         </div>
-                                        <div className="input-wrapper" style={{marginBottom:'3px'}}>
-                                            <label htmlFor="timePreference">Preferred Delivery Hour <span style={{color:'red'}}>*</span></label>
+                                        <div className="input-wrapper" style={{marginBottom:'5px'}}>
+                                            <label htmlFor="timePreference" style={{paddingBottom:'0'}}>Preferred Delivery Hour <span style={{color:'red'}}>*</span></label>
                                             <select id="timePreference" className='emailEndPoint deliveryHourPick' name="timePreference" onChange={handleChange} value={state.timePreference} style={{ width: "auto"}}>
                                                 <option value="">--:--</option>
                                                 <option value="09:00-12:00">09:00-12:00</option>
@@ -1092,7 +1088,7 @@ function App() {
                                             </select>
                                         </div>
                                                     
-                                        <div className='notice'>
+                                        <div className='notice' style={{marginBottom:'-15px'}}>
                                            <p className='deliveryInfoP' style={{marginBottom:'0px'}}>The standard delivery fee is 400 SEK.</p>
                                            <p className='deliveryInfoP' style={{marginTop:'5px'}}>Deliveries on weekends, special holidays, and after 17.00 will incur a special delivery fee of 600 SEK.</p>
                                         </div>
