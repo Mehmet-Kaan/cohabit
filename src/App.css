@@ -880,6 +880,7 @@ html {
 	.removeOrderOnSingleItem{
 		left: 12px;
 		right: 0;
+		max-width: 40px;
 	}
 	.backToProductTypeSelection {
 		top: 73px;
