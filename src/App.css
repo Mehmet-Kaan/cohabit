@@ -47,6 +47,193 @@ html {
 	align-items: center;
 	width: 100%;
 }
+
+/* Selected Image */
+.imageDisplayContainer {
+	display: flex;
+	position: absolute;
+	z-index: 10;
+	justify-content: center;
+	align-items: center;
+	background-color: #000c;
+	width: 100vw;
+	height: 100%;
+	top: 0;
+}
+.imageDisplayBox {
+	position: relative;
+}
+.imageDisplayBox > img {
+	width: 90vw;
+	max-width: 900px;
+	border-radius: 20px;
+	/* border: 1px solid #66C2C9; */
+	box-shadow: 0px 0px 10px #000;
+}
+.closeImg {
+	color: white;
+	font-weight: bolder;
+	transition: all .2s ease-in-out;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 111;
+	top: 2%;
+	right: 2%;
+	font-size: 20px;
+	position: absolute;
+	background: #66C2C9;
+}
+.closeImg:hover{
+	color: #66C2C9;
+	background-color: unset;
+	scale: 1.2;
+}
+/* Warning animation */
+.stillSending {
+	background-color: #a0ebf28a;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	
+	padding: 0px 5px;
+  	border-radius: 60px;
+}
+.stillSending > p{
+	margin: 0;
+	padding: 0px 15px;
+}
+
+.f-modal-alert {
+	/* background-color: #fff;
+	box-shadow: 0 0 10px 2px rgba(0,0,0,.2);
+	border-radius: 4px;
+	padding: 50px;
+	margin: 20px; */
+
+	/* margin-right: 10px; */
+}
+
+.f-modal-alert .f-modal-icon {
+	border-radius: 50%;
+	border: 4px solid gray;
+	box-sizing: content-box;
+	height: 50px;
+	margin: 5px auto;
+	padding: 0;
+	position: relative;
+	width: 50px;
+	
+	&.f-modal-warning {
+		border-color: #F8BB86;
+		
+		&:before {
+			animation: pulseWarning 2s linear infinite;
+			background-color: #fff;
+			border-radius: 50%;
+			content: "";
+			display: inline-block;
+			height: 100%;
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+		}
+		
+		&:after {
+			background-color: #fff;
+			border-radius: 50%;
+			content: '';
+			display: block;
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+		}
+	}
+
+	&.f-modal-warning .f-modal-body {
+		background-color: #F8BB86;
+		border-radius: 2px;
+		height: 22px;
+		left: 50%;
+		margin-left: -2.5px;
+		position: absolute;
+		top: 10px;
+		width: 3px;
+		z-index: 2;
+	}
+
+	&.f-modal-warning .f-modal-dot {
+		background-color: #F8BB86;
+		border-radius: 50%;
+		bottom: 10px;
+		height: 3px;
+		left: 50%;
+		margin-left: -2.5px;
+		position: absolute;
+		width: 3px;
+		z-index: 2;
+	}
+	
+	+ .f-modal-icon {
+		margin-top: 50px;
+	}
+}
+
+.scaleWarning {
+    animation: scaleWarning 0.75s infinite alternate;
+}
+
+.pulseWarningIns {
+    animation: pulseWarningIns 0.75s infinite alternate;
+}
+
+@keyframes scaleWarning {
+	0% {
+		transform: scale(1);
+	}
+	
+	30% {
+		transform: scale(1.02);
+	}
+	
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes pulseWarning {
+	0% {
+		background-color: #fff;
+		transform: scale(1);
+		opacity: 0.5;
+	}
+
+	30% {
+		background-color: #fff;
+		transform: scale(1);
+		opacity: 0.5;
+	}
+
+	100% {
+		background-color: #F8BB86;
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes pulseWarningIns {
+    0% {
+        background-color: #F8D486;
+    }
+
+    100% {
+        background-color: #F8BB86;
+    }
+}
+
 .navigateBtns {
 	width: 95%;
 	display: flex;
@@ -381,12 +568,6 @@ html {
 	border-bottom-right-radius: 20px;
 	z-index: 1;
 }
-/* .addItemToListBtn{
-	margin: 0;
-	position: absolute;
-	bottom: 10px;
-	right: 40px;
-} */
 .orderlistTitle{
 	display: flex;
 	justify-content: space-between;
@@ -529,14 +710,15 @@ html {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	/* padding-left: 20px; */
 }
 /* Ordermade part */
 .backgroundCircle{
   position: absolute;
-  background-color: skyblue;
   height: 25vh;
   width: 100vw;
+  background-color: skyblue;
+  background: #a0ebf28a;
+  background-color: #66C2C9;
 }
 .blueBackgroundTop {
 	top: 0;
@@ -968,6 +1150,16 @@ html {
 	.costPartMobile {
 		width: 70%;
 		justify-content: left;
+	}
+	.imageDisplayBox {
+		position: absolute;
+		top: 22%;
+	}
+	.closeImg{
+		font-size: 16px;
+	}
+	.stillSending {
+		margin-bottom: 15px;
 	}
 	.thanksBox {
 		margin-bottom: 0px;

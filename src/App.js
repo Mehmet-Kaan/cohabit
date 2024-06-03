@@ -7,6 +7,9 @@ import validator from 'validator';
 
 function App() {
     const [loading, setLoading] = useState(false);
+    const [stillSending, setStillSending] = useState(false);
+    const [selectedImg, setSelectedImg] = useState('');
+
     const [response, setResponse] = useState("");
     const [orderMade, setOrderMade] = useState(false);
 
@@ -279,141 +282,6 @@ function App() {
         totalCost:0,
     });
 
-    // const initialState = {
-    //     name:"",
-    //     email:"",
-    //     emailWithoutDomain:"",
-    //     domain:"@hotmail.com",
-    //     wpnumber:false,
-    //     phonenumber:"+46",
-    //     period:"",
-    //     address:"",
-    //     postcode:"",
-    //     deliveryCharge:400,
-    //     orderList:[],
-    //     addOnsList:[],
-    //     deliveryDate:getCurrentDate(),
-    //     timePreference:"",
-    //     anythingElse:"",
-    //     userConsent:false,
-    //     total:0,
-    //     totalCost:0,
-    // }
-    // const initialProducts = [
-    //     {
-    //         id: 1,
-    //         name: "Single Bed",
-    //         description: "80/90cm x 200cm",
-    //         imageUrl: "single_bed.png",
-    //         cost: 199,
-    //         type:'singleItem',
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/single_bed.png?raw=true',
-    //     },
-    //     {
-    //         id: 12,
-    //         name: "Large Single Bed",
-    //         description: "105cm x 200cm",
-    //         imageUrl: "large_single_bed.png",
-    //         cost: 199,
-    //         type:'singleItem',
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/large_single_bed.png?raw=true',
-    //     },
-    //     {
-    //         id: 2,
-    //         name: "Small Double Bed",
-    //         description: "120cm x 200cm",
-    //         imageUrl: "small_double_bed.png",
-    //         cost: 299,
-    //         type:'singleItem',
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/small_double_bed.png?raw=true'
-    //     },
-    //     {
-    //         id: 3,
-    //         name: "Double Bed",
-    //         description: "140cm x 200cm",
-    //         imageUrl: "double_bed.png",
-    //         type:'singleItem',
-    //         cost: 399,
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/double_bed.png?raw=true'
-    //     },
-    //     {
-    //         id: 4,
-    //         name: "Table (Small)",
-    //         imageUrl: "small_table.jpg",
-    //         type:'singleItem',
-    //         cost: 99,
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/small_table.jpg?raw=true'
-    //     },
-    //     {
-    //         id: 5,
-    //         name: "Table (Large)",
-    //         imageUrl: "large_table.jpg",
-    //         type:'singleItem',
-    //         cost: 149,
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/large_table.jpg?raw=true'
-    //     },
-    //     {
-    //         id: 6,
-    //         name: "Chair",
-    //         imageUrl: "chair.jpg",
-    //         type:'singleItem',
-    //         cost: 50,
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/chair.jpg?raw=true',
-    //     },
-    //     {
-    //         id: 7,
-    //         name: "Professional/Working Chair",
-    //         type:'singleItem',
-    //         imageUrl: "work_chair.jpg",
-    //         cost: 100,
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/work_chair.jpg?raw=true'
-    //     },
-    //     {
-    //         id: 8,
-    //         name: "Bedside Storage (Small)",
-    //         imageUrl: "bedside_storage.png",
-    //         type:'singleItem',
-    //         cost: 50,
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/bedside_storage.png?raw=true'
-    //     },
-    //     {
-    //         id: 9,
-    //         name: "Shelf/Storage (Medium)",
-    //         imageUrl: "storage_medium.png",
-    //         type:'singleItem',
-    //         cost: 100,
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/storage_medium.png?raw=true'
-    //     },
-    //     {
-    //         id: 10,
-    //         name: "Shelf/Storage (Large)",
-    //         imageUrl: "storage_large.png",
-    //         type:'singleItem',
-    //         cost: 150,
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/storage_large.png?raw=true'
-    //     },
-    //     {
-    //         id: 11,
-    //         name: "Lights",
-    //         imageUrl: "lights.png",
-    //         type:'singleItem',
-    //         cost: 50,
-    //         quantity:1,
-    //         githubIMGURL:'https://github.com/Mehmet-Kaan/cohabit/blob/main/src/assets/furnitures/lights.png?raw=true'
-    //     }
-    // ]
-
     const images = [
         'https://cohabit.se/wp-content/uploads/2023/07/1-300x300.png',
         'https://cohabit.se/wp-content/uploads/2023/07/2-300x300.png',
@@ -477,12 +345,23 @@ function App() {
 
     const sendOrder = () => {
         if(state.name !== "" && validator.isEmail(state.email) && state.address !== "" && state.userConsent !== false && state.phonenumber !== 0 && state.total > 0) {
+            let counter = 0;
+
+            // Start the interval to count up to 10 seconds
+            const interval = setInterval(() => {
+                counter += 1;
+                if (counter >= 10) {
+                    setStillSending(true);
+                    clearInterval(interval);
+                }
+            }, 1000);   
+
             setLoading(true);
             setActiveProducts("notSelected");
             setResponse("");
             let fetchURL = 'https://cohabit-backend-mehmet.onrender.com/sendEmails';
             // fetchURL = 'sendEmails';
-            
+
             axios.post(fetchURL, state, {
                 headers: {
                   'Content-Type': 'application/json',
@@ -501,7 +380,9 @@ function App() {
                         setResponse("");
                     }, 2000);
 
-                    // setState(initialState);
+                    clearInterval(interval);
+                    setStillSending(false);
+
                     setOrderMade(true);
                     setCurrentSection("products");
                     setLoading(false);
@@ -731,14 +612,17 @@ function App() {
         return {addonlist,priceToReduce};
     }
 
-    // const resetAll = () => {
-    //     setState(initialState); 
-    //     setProducts(initialProducts);
-    // }
-
   return (
     <div className="App">
         <div className="backgroundCircle blueBackgroundTop" />
+        {selectedImg &&
+            <div className="imageDisplayContainer">
+                <div className='imageDisplayBox'>
+                    <button className='closeImg' onClick={()=> setSelectedImg('')}>X</button>
+                    <img src={selectedImg} onClick={()=> setSelectedImg('')} alt="imageFurniture" />
+                </div>
+            </div>
+        }
         <div className="content">    
             <div className="ordermade">
                     {!orderMade ?
@@ -754,7 +638,7 @@ function App() {
                                         {activeProducts === "notSelected" ? 
                                         <div className="activeProductsBtns">
                                             <div className="productSelectionDiv carouselBox">
-                                                <Carousel images={images} />
+                                                <Carousel images={images} onImageClick={setSelectedImg}/>
                                             </div>
                                             {state.orderList.length !== 0 ?
                                             <>
@@ -1207,7 +1091,7 @@ function App() {
                                             }  
                                         </div>
                                         
-                                        <div className="summary-wrapper" style={{ justifyContent:"center", flexDirection:'row', gap:'10px', alignItems:'center', fontWeight:'bold', marginTop:'20px',marginBottom:'25px'}}>
+                                        <div className="summary-wrapper" style={{ justifyContent:"center", flexDirection:'row', gap:'10px', alignItems:'center', fontWeight:'bold', marginTop:'20px',marginBottom:'15px'}}>
                                             <input type="checkbox" id="userConsent" name="userConsent" onChange={handleCheckBoxChange} checked={state.userConsent}/>
                                             <label htmlFor="userConsent" className='userContentLabel'>I agree that the gathered information can be used for further communication with Cohabit <span style={{color:'red'}}>*</span></label>
                                         </div>
@@ -1217,6 +1101,19 @@ function App() {
                                             </p>
                                         }
                                     </div>
+
+                                    {stillSending && 
+                                        <div className='stillSending'>
+                                            <div className="f-modal-alert">
+                                                <div className="f-modal-icon f-modal-warning scaleWarning">
+                                                    <span className="f-modal-body pulseWarningIns"></span>
+                                                    <span className="f-modal-dot pulseWarningIns"></span>
+                                                </div>
+                                            </div>
+                                            <p className='raleway-normal'>Your request is taking longer than expected. Please wait a moment...</p>
+                                        </div>
+                                    }
+
                                     <div className="navigateBtns">
                                         <button className="btn backBtn" onClick={()=> {setCurrentSection("customerInfo"); setActiveTitle("Customer Information")}}>Back</button>
                                         <button className='btn submitBtn' onClick={sendOrder} disabled={loading}>
@@ -1225,7 +1122,6 @@ function App() {
                                             }
                                         </button>
                                     </div>
-
                                 </>
                                 :
                                 <>
