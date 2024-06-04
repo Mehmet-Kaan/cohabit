@@ -7,7 +7,7 @@ import validator from 'validator';
 
 function App() {
     const [loading, setLoading] = useState(false);
-    const [stillSending, setStillSending] = useState(false);
+    const [stillSending, setStillSending] = useState(true);
     const [selectedImg, setSelectedImg] = useState('');
 
     const [response, setResponse] = useState("");
@@ -350,7 +350,7 @@ function App() {
             // Start the interval to count up to 10 seconds
             const interval = setInterval(() => {
                 counter += 1;
-                if (counter >= 10) {
+                if (counter >= 5) {
                     setStillSending(true);
                     clearInterval(interval);
                 }
@@ -1104,13 +1104,13 @@ function App() {
 
                                     {stillSending && 
                                         <div className='stillSending'>
-                                            <div className="f-modal-alert">
+                                            {/* <div className="f-modal-alert">
                                                 <div className="f-modal-icon f-modal-warning scaleWarning">
                                                     <span className="f-modal-body pulseWarningIns"></span>
                                                     <span className="f-modal-dot pulseWarningIns"></span>
                                                 </div>
-                                            </div>
-                                            <p className='raleway-normal'>Your request is taking longer than expected. Please wait a moment...</p>
+                                            </div> */}
+                                            <p className='raleway-normal'>Your order is being processed. Please wait a moment!</p>
                                         </div>
                                     }
 
