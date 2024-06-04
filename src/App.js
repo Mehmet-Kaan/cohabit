@@ -282,7 +282,8 @@ function App() {
         totalCost:0,
     });
 
-    const imgsURL = 'http://localhost:3000/cohabit';
+    // const imgsURL = 'http://localhost:3000/cohabit';
+    const imgsURL = 'https://mehmet-kaan.github.io/cohabit';
 
     const images = [
         {small: `${imgsURL}/images/small/cohabit1.jpg`, large: `${imgsURL}/images/large/cohabit1.jpg`},
