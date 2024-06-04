@@ -64,10 +64,10 @@ html {
 	position: relative;
 }
 .imageDisplayBox > img {
-	width: 90vw;
-	max-width: 900px;
+	max-width: 90vw;
 	border-radius: 20px;
 	box-shadow: 0px 0px 10px #000;
+	max-height: 90vh;
 }
 .closeImg {
 	color: white;

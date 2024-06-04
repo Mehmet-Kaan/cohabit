@@ -55,8 +55,8 @@ const Carousel = ({ images, onImageClick }) => {
   return (
     <Slider {...settings}>
       {images.map((image, index) => (
-        <div key={index} onClick={() => onImageClick(image)}>
-          <img src={image} alt={`examplePhoto ${index + 1}`} />
+        <div key={index} onClick={() => onImageClick(image.large)}>
+          <img src={image.small} alt={`examplePhoto ${index + 1}`} />
         </div>
       ))}
     </Slider>

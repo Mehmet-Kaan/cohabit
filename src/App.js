@@ -282,15 +282,16 @@ function App() {
         totalCost:0,
     });
 
-    const images = [
-        'https://cohabit.se/wp-content/uploads/2023/07/1-300x300.png',
-        'https://cohabit.se/wp-content/uploads/2023/07/2-300x300.png',
-        'https://cohabit.se/wp-content/uploads/2023/07/3-300x300.png',
-        'https://cohabit.se/wp-content/uploads/2023/07/4-300x300.png',
-        'https://cohabit.se/wp-content/uploads/2023/07/5-300x300.png',
-        'https://cohabit.se/wp-content/uploads/2023/07/6-300x300.png',
-        'https://cohabit.se/wp-content/uploads/2023/07/Cohabit-Gallery-300x300.png',
+    const imgsURL = 'http://localhost:3000/cohabit';
 
+    const images = [
+        {small: `${imgsURL}/images/small/cohabit1.jpg`, large: `${imgsURL}/images/large/cohabit1.jpg`},
+        {small: `${imgsURL}/images/small/cohabit2.jpg`, large: `${imgsURL}/images/large/cohabit2.jpg`},
+        {small: `${imgsURL}/images/small/cohabit3.jpg`, large: `${imgsURL}/images/large/cohabit3.jpg`},
+        {small: `${imgsURL}/images/small/cohabit4.jpg`, large: `${imgsURL}/images/small/cohabit4.jpg`},
+        {small: `${imgsURL}/images/small/cohabit5.jpg`, large: `${imgsURL}/images/large/cohabit5.jpg`},
+        {small: `${imgsURL}/images/small/cohabit6.jpg`, large: `${imgsURL}/images/large/cohabit6.jpg`},
+        {small: `${imgsURL}/images/small/cohabit7.jpg`, large: `${imgsURL}/images/large/cohabit7.jpg`},
     ];
 
     const handleChange = ({ target: { value, name } }) => {
