@@ -350,7 +350,7 @@ function App() {
             // Start the interval to count up to 10 seconds
             const interval = setInterval(() => {
                 counter += 1;
-                if (counter >= 2) {
+                if (counter >= 5) {
                     setStillSending(true);
                     clearInterval(interval);
                 }
