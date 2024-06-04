@@ -621,7 +621,7 @@ function App() {
             <div className="imageDisplayContainer">
                 <div className='imageDisplayBox'>
                     <button className='closeImg' onClick={()=> setSelectedImg('')}>X</button>
-                    <img src={selectedImg} onClick={()=> setSelectedImg('')} alt="imageFurniture" />
+                    <img src={selectedImg} onClick={()=> setSelectedImg('')} loading='lazy' alt="imageFurniture" />
                 </div>
             </div>
         }
