@@ -7,7 +7,7 @@ import validator from 'validator';
 
 function App() {
     const [loading, setLoading] = useState(false);
-    const [stillSending, setStillSending] = useState(true);
+    const [stillSending, setStillSending] = useState(false);
     const [selectedImg, setSelectedImg] = useState('');
 
     const [response, setResponse] = useState("");
