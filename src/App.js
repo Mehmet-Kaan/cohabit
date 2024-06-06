@@ -289,7 +289,7 @@ function App() {
         {small: `${imgsURL}/images/small/cohabit1.jpg`, large: `${imgsURL}/images/large/cohabit1.jpg`},
         {small: `${imgsURL}/images/small/cohabit2.jpg`, large: `${imgsURL}/images/large/cohabit2.jpg`},
         {small: `${imgsURL}/images/small/cohabit3.jpg`, large: `${imgsURL}/images/large/cohabit3.jpg`},
-        {small: `${imgsURL}/images/small/cohabit4.jpg`, large: `${imgsURL}/images/small/cohabit4.jpg`},
+        {small: `${imgsURL}/images/small/cohabit4.jpg`, large: `${imgsURL}/images/large/cohabit4.jpg`},
         {small: `${imgsURL}/images/small/cohabit5.jpg`, large: `${imgsURL}/images/large/cohabit5.jpg`},
         {small: `${imgsURL}/images/small/cohabit6.jpg`, large: `${imgsURL}/images/large/cohabit6.jpg`},
         {small: `${imgsURL}/images/small/cohabit7.jpg`, large: `${imgsURL}/images/large/cohabit7.jpg`},
