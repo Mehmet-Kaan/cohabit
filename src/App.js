@@ -283,7 +283,8 @@ function App() {
     });
 
     // const imgsURL = 'http://localhost:3000/cohabit';
-    const imgsURL = 'https://mehmet-kaan.github.io/cohabit';
+    // const imgsURL = 'https://mehmet-kaan.github.io/cohabit';
+    const imgsURL = 'https://orderwizard.cohabit.se';
 
     const images = [
         {small: `${imgsURL}/images/small/cohabit1.jpg`, large: `${imgsURL}/images/large/cohabit1.jpg`},
